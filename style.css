@@ -9,7 +9,6 @@
 
 body{
     background-color: rgb(255, 239, 194); /*the background color of the page*/
-    
 }
 
 
@@ -50,7 +49,7 @@ header .navbar ul li{
 }
 
 header .navbar ul li a{
-    font-size: 20px;
+    font-size: 150%;
     padding: 23px 20px;
     color: #333;
     display: flex;
@@ -78,4 +77,46 @@ header .navbar ul li a:hover{
 header .navbar ul li a:hover:after{
     width:98%; /*length of the line appear*/
 }
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .col1, .col2, .col3 {
+    width: 30%;
+    flex-basis: 30%; 
+    padding: 10px;
+    font-size: 80%;
+  }
+  
+  
+  .col2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .col2 ul li {
+    margin-bottom: 10px;
+  }
+
+  .col2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 33%; /* Adjust the position of the vertical line as needed */
+    border-left: 1px solid #333; /* Customize the appearance of the vertical line */
+  }
+
 
