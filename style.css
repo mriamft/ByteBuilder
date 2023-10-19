@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /*The font chosen for the whole page*/
+    text-decoration: none; /*lines under links disappear*/
+}
+
+body{
+    background-color: rgb(255, 239, 194); /*the background color of the page*/
+    
+}
+
+
+/*The whole bar*/
+header{ 
+    position: fixed; /*bar will remain fixed in its position on the viewport even if the user scrolls the page.*/
+    top: 0; /*top postion*/
+    left: 0; /*left postion*/
+    right: 0; /*right postion*/
+    padding: 0% 7%; /*0% represents the top and bottom padding, and 7% represents the left and right padding. */
+    display: flex; /*The child elements inside the container become flex items and are arranged based on the flex layout rules.*/
+    align-items: center; /*items placed in center*/
+    justify-content: space-between; /*equal space between element*/
+    background-image: linear-gradient(79deg,rgb(238, 238, 238),rgb(255, 255, 255)); /*Notice the white bar started with gray and rhe white*/
+    box-shadow: 0px 0px 30px rgba(255, 193, 93, 0.5); /*shdow for the bar box*/
+
+}
+
+/*logo part*/
+.logo{
+    width: 10rem; /*logo size*/
+    
+}
+
+/*image inside ID ByteBuilderLogo*/
+#ByteBuilderLogo img{
+   width: 100%;
+   height: 100%;
+}
+
+header .navbar ul{
+    list-style: none; /*to remove the list marker*/
+}
+
+header .navbar ul li{
+    float: left;
+    
+}
+
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 23px 20px;
+    color: #333;
+    display: flex;
+    position: relative;
+    font-weight:900;
+}
+
+
+header .navbar ul li a:hover{
+    color: rgba(193, 103, 0, 0.984); /*color appear when clicking on the list element*/
+  }
+
+  /*action happens after click on list element*/
+  header .navbar ul li a:after{
+    content: ""; /*required*/
+    position: absolute; /* it is positioned based on its containing block*/
+    background-color: rgba(255, 193, 122, 0.459);
+    height: .3rem; /*the width of the line appear*/
+    width: 0%;
+    right: 0; /*right postion starting from right*/
+    bottom: 0; /*same as above*/
+    transition: 0.5s; /*speed*/
+}
+
+header .navbar ul li a:hover:after{
+    width:98%; /*length of the line appear*/
+}
+
