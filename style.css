@@ -128,17 +128,21 @@ footer {
     border-left: 1px solid #333; /* Customize the appearance of the vertical line */
   }
 
-  .Vision{
-    background-color: rgb(255, 255, 255);
-    opacity: .7;
-    padding-bottom: 20px;
+  .Vision {
+    background-color: rgba(255, 255, 255,0.7);
+    background-image: url(images/kidsCode.webp);
+    background-repeat: no-repeat;
+    background-position: 0 -490px;
+  background-size: cover;
+    padding-bottom: 50px;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 150px; /*is there's ant other way?*/
     box-shadow:  0px 0px 10px #3333334c;
     text-align: center;
   }
-
+ 
+  
   .Vision h3 {
     font-size: 2em;
     color: #f77b52;
