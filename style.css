@@ -128,3 +128,26 @@ footer {
     border-left: 1px solid #333; /* Customize the appearance of the vertical line */
   }
 
+  .Vision{
+    background-color: rgb(255, 255, 255);
+    opacity: .7;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 150px; /*is there's ant other way?*/
+    box-shadow:  0px 0px 10px #3333334c;
+    text-align: center;
+  }
+
+  .Vision h3 {
+    font-size: 2em;
+    color: #f77b52;
+  }
+
+  .Vision p {
+    font-size: 1.3em;
+  }
+
+
+
+
