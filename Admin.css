@@ -1,0 +1,37 @@
+
+body{
+    background-color:cornsilk;
+}
+
+.registerd_kid{
+   background-size: contain;
+    background-color: aquamarine;
+    width: fit-content;
+    position: static;
+    border-radius: 10% 10% 5% 5%;
+}
+
+.registerd_kid h1{
+background-color: antiquewhite;
+background-size: contain;
+border-style: outset;
+border-radius: 10%;
+}
+/*
+.student_Name{
+    background-color: burlywood;
+    text-align: left;
+    max-width: fit-content;
+    background-size: cover;
+    
+}
+
+.student_Name img{
+    width: 10%;
+    height: 10%;
+    background-color:white;
+    border-radius:50% ;
+    float: left ;
+    margin-right: 1%;
+    
+}*/
