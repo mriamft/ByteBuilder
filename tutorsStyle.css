@@ -10,127 +10,79 @@
 body{
     background-color: rgb(255, 239, 194); /*the background color of the page*/
 }
-
-
-/*The whole bar*/
-header{ 
-    position: fixed; /*bar will remain fixed in its position on the viewport even if the user scrolls the page.*/
-    top: 0; /*top postion*/
-    left: 0; /*left postion*/
-    right: 0; /*right postion*/
-    padding: 0% 7%; /*0% represents the top and bottom padding, and 7% represents the left and right padding. */
-    display: flex; /*The child elements inside the container become flex items and are arranged based on the flex layout rules.*/
-    align-items: center; /*items placed in center*/
-    justify-content: space-between; /*equal space between element*/
-    background-image: linear-gradient(79deg,rgb(238, 238, 238),rgb(255, 255, 255)); /*Notice the white bar started with gray and rhe white*/
-    box-shadow: 0px 0px 30px rgba(255, 193, 93, 0.5); /*shdow for the bar box*/
-
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* might change*/
+  background-color: #f2f2f2;
 }
 
-/*logo part*/
-.logo{
-    width: 10rem; /*logo size*/
-    
+.logo img {
+  width: 250px; 
+  height: auto; /* Automatically adjust the height while maintaining the aspect ratio */
 }
 
-/*image inside ID ByteBuilderLogo*/
-#ByteBuilderLogo img{
-   width: 100%;
-   height: 100%;
+.navbar {
+  width: 60vw;
+  padding: 20px;
 }
 
-header .navbar ul{
-    list-style: none; /*to remove the list marker*/
-}
-
-header .navbar ul li{
-    float: left;
-    
-}
-
-header .navbar ul li a{
-    font-size: 150%;
-    padding: 23px 20px;
-    color: #333;
-    display: flex;
-    position: relative;
-    font-weight:900;
+.navbar ul {
+  font-weight: 900;
+  font-size: 1.3em;
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* Align the navbar links to the right */
 }
 
 
-header .navbar ul li a:hover{
-    color: rgba(193, 103, 0, 0.984); /*color appear when clicking on the list element*/
-  }
-
-  /*action happens after click on list element*/
-  header .navbar ul li a:after{
-    content: ""; /*required*/
-    position: absolute; /* it is positioned based on its containing block*/
-    background-color: rgba(255, 193, 122, 0.459);
-    height: .3rem; /*the width of the line appear*/
-    width: 0%;
-    right: 0; /*right postion starting from right*/
-    bottom: 0; /*same as above*/
-    transition: 0.5s; /*speed*/
+.navbar a {
+  text-decoration: none;
+  color: #333;
 }
 
-header .navbar ul li a:hover:after{
-    width:98%; /*length of the line appear*/
+
+/*MAIN CSS*/
+.Vision{
+  width: 100%;
 }
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 20px;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .col1, .col2, .col3 {
-    width: 30%;
-    flex-basis: 30%; 
-    padding: 10px;
-    font-size: 80%;
-  }
-  
-  
-  .col2 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .col2 ul li {
-    margin-bottom: 5%;
-  }
 
-  .col2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 34%; /* Adjust the position of the vertical line as needed */
-    border-left: 1px solid #333; /* Customize the appearance of the vertical line */
-  }
+.imageContainer{
+  position: relative;
+  object-fit: cover;
+}
 
-  .col3::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 65%; /* Adjust the position of the vertical line as needed */
-    border-left: 1px solid #333; /* Customize the appearance of the vertical line */
-  }
+.imageContainer img{
+  width: 100%;
+  height: auto;
+}
 
-  
- 
-  
+
+.visionText{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.749);
+  color: #000000;
+}
+
+.visionText h3{
+  font-size: 350%;
+  color: rgb(223, 124, 4);
+}
+
+.visionText p{
+  font-size: 150%;
+  margin: 0 20px 20px 20px;
+  text-align: center;
+}
   
 .Tutors{
     text-align: center;
@@ -139,9 +91,6 @@ footer {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
-
-
-
 
 
 
@@ -180,7 +129,32 @@ ul.breadcrumb {
   }
   
 
+  
+
+.toturcontainer{
+max-height: 120px;
+border: 1px solid grey;
+
+display: flex ;
+overflow-x: auto
+;
+
+}
 
 
+.toturcontainer::-webkit-scrollbar{
+
+width: 0;
+
+   
+}
 
 
+.toturcontainer .toturInfo{
+min-width: 110px;
+
+  border: 1px solid grey;
+   text-align: center;
+   margin-right: 7px ;
+    
+}

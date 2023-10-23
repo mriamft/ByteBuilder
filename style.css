@@ -14,7 +14,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px; /* might change*/
   background-color: #f2f2f2;
 }
 
@@ -24,7 +24,7 @@ body{
 }
 
 .navbar {
-  width: 50vw;
+  width: 60vw;
   padding: 20px;
 }
 
@@ -36,9 +36,6 @@ body{
   justify-content: space-between; /* Align the navbar links to the right */
 }
 
-.navbar li {
-  margin-left: 20px; /* Increase the margin between navbar links */
-}
 
 .navbar a {
   text-decoration: none;
