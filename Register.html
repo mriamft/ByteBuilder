@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register page</title>
+    <style>
+        ul.breadcrumb {
+          padding: 10px 16px;
+          list-style: none;
+          background-color: #eee;
+        }
+        ul.breadcrumb li {
+          display: inline;
+          font-size: 18px;
+        }
+        ul.breadcrumb li+li:before {
+          padding: 8px;
+          color: black;
+          content: "/\00a0";
+        }
+        ul.breadcrumb li a {
+          color: #0275d8;
+          text-decoration: none;
+        }
+        ul.breadcrumb li a:hover {
+          color: #01447e;
+          text-decoration: underline;
+        }
+        </style>
+    <title>Home page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header>
         <div class="container">
             <div class="logo">
@@ -24,6 +49,48 @@
         </div>
     </header>
 
+    <main>
+        
+
+        
+
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Parent.html">Parents</a></li>
+            <li>Register a new kid </li>
+        </ul>
+
+        <img src="xxx" alt="Register a new kid banner" width=100% height=auto>
+
+        <form action="/action_page.php">
+            <h2>Kid's information:</h2>
+            <hr>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter full name"><br>
+                <label>Date of Birth:<br><input type="date"
+                                            name="birthDate">
+                  </label><br>
+
+            <input type="radio" id="male" name="fav_language" value="HTML">
+           <label for="male">Male</label><br>
+           <input type="radio" id="female" name="fav_language" value="CSS">
+           <label for="css">Female</label><br>
+           
+           
+                <label for="img">Upload photo:</label><br>
+                <input type="file" id="img" name="img" accept="image/*"></p>
+
+                <h2>Contact information:</h2>
+                <hr>
+                <label for="phone">Enter phone number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx"  required><br>
+                <label for="email">Enter your email:</label><br>
+                <input type="email" id="email" name="email">
+                
+
+            
+          </form> 
+    </main>
     
     <footer>
         <div class="container">
