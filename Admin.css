@@ -1,37 +1,36 @@
+.registed_kid {
+background: bisque;
+display: inline-flex;
+flex-wrap: wrap;
+ justify-content: space-evenly;/* place of the content*/
+align-content:space-evenly;
 
-body{
-    background-color:cornsilk;
+
 }
 
-.registerd_kid{
-   background-size: contain;
-    background-color: aquamarine;
-    width: fit-content;
-    position: static;
-    border-radius: 10% 10% 5% 5%;
+
+
+.registration_header {
+  background: rgb(156, 105, 42);
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+   justify-content:flex-start ;/* place of the content*/
+   flex-shrink: 0;
+   
+}
+.registration_header h1{
+margin: 1%;
+  
 }
 
-.registerd_kid h1{
-background-color: antiquewhite;
-background-size: contain;
-border-style: outset;
-border-radius: 10%;
-}
-/*
-.student_Name{
-    background-color: burlywood;
-    text-align: left;
-    max-width: fit-content;
-    background-size: cover;
-    
+.kid {
+  
+  background:burlywood;
+  flex-shrink: 0;
+  padding: 5px;
+  margin: 5px;
+
 }
 
-.student_Name img{
-    width: 10%;
-    height: 10%;
-    background-color:white;
-    border-radius:50% ;
-    float: left ;
-    margin-right: 1%;
-    
-}*/
+
