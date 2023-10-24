@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /*to make child */
     font-family: 'Poppins', sans-serif; /*The font chosen for the whole page*/
     text-decoration: none; /*lines under links disappear*/
 }
@@ -10,40 +11,39 @@
 body{
     background-color: rgb(255, 239, 194); /*the background color of the page*/
 }
-.container {
+
+header{
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between ;
   align-items: center;
-  padding: 20px; /* might change*/
+  padding: 10px 100px;
   background-color: #f2f2f2;
-}
+  width: 100%;
+  position: fixed;
+  color: rgb(43, 43, 43);
 
-.logo img {
-  width: 250px; 
-  height: auto; /* Automatically adjust the height while maintaining the aspect ratio */
-}
-
-.navbar {
-  width: 60vw;
-  padding: 20px;
 }
 
 .navbar ul {
   font-weight: 900;
   font-size: 1.3em;
   list-style: none;
+  padding-left: 300px;
   display: flex;
-  justify-content: space-between; /* Align the navbar links to the right */
+  /* justify-content: space-between; Align the navbar links to the right */
 }
 
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
+.navbar a:hover{
+  color: rgb(255, 182, 72);
 }
 
+.navbar a{
+  color: rgb(43, 43, 43);
+  padding-left: 50px;
+}
 
-/*MAIN CSS*/
+/* 
+/*MAIN CSS
 .Vision{
   width: 100%;
 }
@@ -82,7 +82,7 @@ body{
   font-size: 150%;
   margin: 0 20px 20px 20px;
   text-align: center;
-}
+} */
   
 .Tutors{
     text-align: center;
