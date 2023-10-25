@@ -1,36 +1,97 @@
+
 .registed_kid {
 background: bisque;
 display: inline-flex;
 flex-wrap: wrap;
- justify-content: space-evenly;/* place of the content*/
-align-content:space-evenly;
-
+justify-content: space-evenly;
+border-radius: 3%;
+width: fit-content;
+ margin:2%;
 
 }
 
 
 
-.registration_header {
-  background: rgb(156, 105, 42);
-  width:100%;
-  display:flex;
+.header {
+  background: rgb(161, 107, 109);
+  border: 0.1em solid;
+border-radius: 0.3em;
+  display:inline-flex;
+  width: 100%;
   flex-wrap: wrap;
-   justify-content:flex-start ;/* place of the content*/
-   flex-shrink: 0;
+     flex-shrink: 1;
+    
    
 }
-.registration_header h1{
-margin: 1%;
-  
+.header h1{
+margin:2%;
 }
+
 
 .kid {
-  
+ 
   background:burlywood;
-  flex-shrink: 0;
-  padding: 5px;
-  margin: 5px;
+  margin: 1%;
+  border-radius: 5%;
+display:inline-flex;
+flex-shrink: 1;
+font-size: large;
+font-weight: bold;
+display: inline-flex;
+
 
 }
 
 
+
+.kid img{
+width:10%;
+padding: 1%;
+margin: 1%;
+border-radius: 50%;
+background-color: rgb(255, 255, 255);
+flex-shrink: 1;
+background-position: left;
+
+}
+
+/***********************tuotr*********************************************/
+.tutors_box{
+
+  margin: 2%;
+  background-color: aliceblue;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 3%;
+  width: fit-content;
+}
+
+.tutor{
+background-color: rgb(198, 172, 222);
+display: inline-flex;
+margin: 1%;
+position: relative;
+}
+.tutor a{
+  text-decoration: none;
+  text-align:right;
+  color: black;
+font-weight: bold;
+  
+
+}
+
+.tutor img{
+margin: 2%;
+  width:10%;
+  position: right;
+}
+
+.cursesList h2{
+text-align: right;  
+
+background-color: bisque;
+
+
+}
