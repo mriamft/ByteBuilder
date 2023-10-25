@@ -1,0 +1,26 @@
+
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-image: url(images/visionImage.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(240, 255, 255, 0.7);
+  }
+  
+  main h3{
+    color: rgb(183, 110, 0);
+    font-size: 3em;
+    background-color: rgba(240, 255, 255, 0.7);
+  }
+  
+  main p{
+    font-size: 1.5em;
+    background-color: rgba(240, 255, 255, 0.7);;
+  }
+  
