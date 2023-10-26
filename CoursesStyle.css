@@ -46,7 +46,7 @@ ul.breadcrumb {
     margin-bottom:30px ;
     
     /*background-image: url(images/courseimage.jpg);*/
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6)70%, transparent), url(images/courseimage.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6)100%, transparent), url(images/courseimage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;

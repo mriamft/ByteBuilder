@@ -1,26 +1,159 @@
 
+.vision{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6)100%, transparent), url(images/visionImage.webp);
+}
 
-main{
-    width: 100%;
-    min-height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    background-image: url(images/visionImage.webp);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-color: rgba(240, 255, 255, 0.7);
-  }
-  
-  main h3{
-    color: rgb(183, 110, 0);
-    font-size: 3em;
-    background-color: rgba(240, 255, 255, 0.7);
-  }
-  
-  main p{
-    font-size: 1.5em;
-    background-color: rgba(240, 255, 255, 0.7);;
-  }
-  
+.title{
+  color: rgb(216, 130, 0);
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.vision p{
+  font-size: 1.5em;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.courses .content{
+  margin-top: 30px;
+}
+
+.course-card{
+  border: 1px solid rgb(0, 0, 0);
+  background-color: white;
+  min-height: 14em;
+  width: 15em;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px;
+  transition: 0.7s ease;
+}
+
+.course-card:hover{
+  transform: scale(1.1);
+}
+
+.course-card:hover .courses-image{ 
+  opacity: 0.8;
+}
+
+.courses-image img{
+  width: 100%;
+}
+
+.course-info{
+  padding: 1em;
+}
+
+.courses-desc{
+  font-size: 0.8em;
+}
+
+.course-title{
+  margin-bottom: 80px;
+  font-size: 1.1em;
+}
+
+.checked {
+color: orange;
+}
+
+.rating {
+margin-top: 1px;
+font-size: 1.6em;
+}
+
+#parent-rate{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 100%;
+}
+
+.parent-rate-heading{
+letter-spacing: 1px;
+margin: 30px 0px;
+padding: 10px 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.rateContainer{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+width: 100%;
+}
+
+.parentBox{
+width: 500px;
+box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.107);
+background-color: white;
+padding: 20px;
+margin: 15px;
+transition: 0.6s ease
+}
+
+.profileImage{
+width: 50px;
+min-height: 50px;
+border-radius: 80%;
+overflow: hidden;
+margin-right: 10px;
+}
+
+.profileImage img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.profile{
+display: flex;
+align-items: center;
+}
+
+.name-user{
+display: flex;
+flex-direction: column;
+}
+
+
+
+.name-user strong{
+color: rgb(31, 31, 31);
+font-size: 1.1rem;
+letter-spacing: 0.5px;
+}
+
+.box-top{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+
+}
+
+.parentBox:hover{
+transform: scale(1.1);
+}
+
+.star {
+color: rgb(255, 196, 0);
+}
+

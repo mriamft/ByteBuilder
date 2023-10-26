@@ -14,12 +14,12 @@ body{
 
 header{
   display: flex;
-  justify-content:space-around ;
+  justify-content:space-between ;
   align-items: center;
+  padding: 10px 100px;
   width: 100%;
   position: sticky;
   color: rgb(43, 43, 43);
-  flex-wrap: wrap;
 
 }
 
@@ -32,7 +32,7 @@ main{
   font-weight: 900;
   font-size: 1.3em;
   list-style: none;
-  float: left;
+  padding-left: 300px;
   display: flex;
   /* justify-content: space-between; Align the navbar links to the right */
 }
@@ -44,8 +44,6 @@ main{
 .navbar a{
   color: rgb(43, 43, 43);
   padding-left: 50px;
-  text-align: center;
-
 }
 
 
@@ -60,10 +58,16 @@ header ,footer{
   justify-content: space-between;
 }
 
+.footcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .col1,
 .col2,
 .col3 {
   flex-basis: 30%;
+  margin-top: 20px;
 }
 
 /* Additional styling for each column */
@@ -123,82 +127,3 @@ ul.breadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
 }
-
-
-/* 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px; /* might change
-  background-color: #f2f2f2;
-}
-
-.logo img {
-  width: 250px; 
-  height: auto;  Automatically adjust the height while maintaining the aspect ratio 
-}
-
-.navbar {
-  width: 60vw;
-  padding: 20px;
-}
-
-.navbar ul {
-  font-weight: 900;
-  font-size: 1.3em;
-  list-style: none;
-  display: flex;
-  justify-content: space-between; /* Align the navbar links to the right 
-}
-
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-}
-
-
-/*MAIN CSS
-.Vision{
-  width: 100%;
-}
-
-.imageContainer{
-  position: relative;
-  object-fit: cover;
-}
-
-.imageContainer img{
-  width: 100%;
-  height: auto;
-}
-
-
-.visionText{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.749);
-  color: #000000;
-}
-
-.visionText h3{
-  font-size: 350%;
-  color: rgb(223, 124, 4);
-}
-
-.visionText p{
-  font-size: 150%;
-  margin: 0 20px 20px 20px;
-  text-align: center;
-} */
-
-
-
