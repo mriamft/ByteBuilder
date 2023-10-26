@@ -2,16 +2,16 @@
 main{
   margin-bottom: 20px;
 }
-.vision{
+.vision {
   display: flex;
   width: 100%;
   min-height: 50vh;
   text-align: center;
   flex-direction: column;
+  justify-content: center; /* Added */
   align-items: center;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6)100%, transparent), url(images/visionImage.webp);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6) 100%, transparent), url(images/visionImage.webp);
   background-size: cover;
-
 }
 
 .title{

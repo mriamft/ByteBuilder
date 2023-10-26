@@ -28,6 +28,10 @@ main{
   flex-direction: column;
 }
 
+.navbar li{
+  position: relative; /* Add this line */
+}
+
 .navbar ul {
   font-weight: 900;
   font-size: 1.3em;
@@ -38,7 +42,7 @@ main{
 }
 
 .navbar a:hover{
-  color: rgb(255, 182, 72);
+  color: rgb(240, 144, 0);
 }
 
 .navbar a{
@@ -46,6 +50,21 @@ main{
   padding-left: 50px;
 }
 
+/*action happens after click on list element*/
+.navbar li a:after{
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 136, 0, 0.459);
+  height: .3rem;
+  width: 0%;
+  right: 0;
+  bottom: 0;
+  transition: 0.5s;/
+}
+
+.navbar li a:hover:after{
+  width:98%; /*length of the line appear*/
+}
 
 
 
