@@ -14,12 +14,12 @@ body{
 
 header{
   display: flex;
-  justify-content:space-between ;
+  justify-content:space-around ;
   align-items: center;
-  padding: 10px 100px;
   width: 100%;
   position: sticky;
   color: rgb(43, 43, 43);
+  flex-wrap: wrap;
 
 }
 
@@ -32,7 +32,7 @@ main{
   font-weight: 900;
   font-size: 1.3em;
   list-style: none;
-  padding-left: 300px;
+  float: left;
   display: flex;
   /* justify-content: space-between; Align the navbar links to the right */
 }
@@ -44,6 +44,8 @@ main{
 .navbar a{
   color: rgb(43, 43, 43);
   padding-left: 50px;
+  text-align: center;
+
 }
 
 
