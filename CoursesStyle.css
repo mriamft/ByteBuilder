@@ -41,16 +41,16 @@ ul.breadcrumb {
     font-size: 2em;
     color: #f7774c;
     font-family: 'Courier New', Courier, monospace;
-    padding-top:10vh;
+    padding-top:12%;
     font-weight: bold;
     margin-bottom:30px ;
-    margin-top:20px;
+    
     /*background-image: url(images/courseimage.jpg);*/
     background-image: linear-gradient(rgba(255, 255, 255, 0.6)70%, transparent), url(images/courseimage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 300px;
+    height: 50vh;
     border-radius: 5px;
     box-shadow:1px 2px 1px #e8e9e9;
     
@@ -64,6 +64,7 @@ ul.breadcrumb {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 5em;
 
   }
 
@@ -73,7 +74,8 @@ ul.breadcrumb {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 3px 4px 2px #c5e0e1;
-    min-height: 13em;
+    height: 31em ;
+    /*min-height: 13em;*/
     width:23em;
     overflow: hidden;
     margin:2em;
@@ -106,19 +108,25 @@ ul.breadcrumb {
 
   }
 
+  .course:hover{
+    height: 53em;
+  }
+
+   
   .courseDetailsWhenHover{
-    display: none;
     padding:0.8em;
   }
 
+ /*
   .courseAlreadyDisplayed:hover + .courseDetailsWhenHover{
     display: block;
     
-  }
+  }*/
 
 
   .courseDetailsWhenHover ul{
-    list-style-position: inside;
+    list-style-position: outside;
+    padding-left: 1.5em;
   }
 
 
