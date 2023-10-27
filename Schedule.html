@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutors page</title>
+    <title>Schedule page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="schedule.css">
 </head>
 <body>
     <header>
@@ -17,16 +18,91 @@
                  <li><a href="Tutors.html">Tutors</a></li>
                 </ul> 
              </nav>
-</header>
+    </header>
 
-<footer>
+    <hr>
+  <main>
+
+
+    <div class="breadcrumbss">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Schedule.html">Schedule</a></li>
+        </ul>
+    </div>
+    <hr>
+
+    <div class="ScedContainer">
+        <table>
+            <caption>week dates 30/10/2023 - 6/11/2023</caption>
+            <thead>
+              <tr>
+                <td></td>
+                <td class="timeSpan"></td>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="tutor-name" rowspan="5">T. Maryam</th>
+                <td>3:00 - 4:00</td>
+                <td rowspan="3">ML for children</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="off-day"></td>
+                <td class="off-day"></td>
+              </tr>
+              <tr>
+                <td>4:00 - 5:00</td>
+                <td></td>
+                <td colspan="2" rowspan="2">Scrach 1</td>
+                <td></td>
+                <td class="off-day"></td>
+                <td class="off-day"></td>
+              </tr>
+              <tr>
+                <td>5:00 - 6:00</td>
+                <td></td>
+                <td></td>
+                <td class="off-day"></td>
+                <td class="off-day"></td>
+              </tr>
+              <tr>
+                <td>6:00 - 7:00</td>
+                <td colspan="5">Robo</td>
+                <td class="off-day"></td>
+                <td class="off-day"></td>
+              </tr>
+              <tr>
+                <td>7:00 - 8:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="off-day"></td>
+                <td class="off-day"></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+</main>
+
+    <footer>
     <div class="container">
         <div class="col1"> <!--for the right most column*/-->
             <h3>ByteBuilder's Story</h3>
             <p>ByteBuilder embarked on a journey of innovation, shaping the digital realm with their visionary ideas. Our platform has become a hub of creativity, empowering individuals to bring their ideas to life and leaving a lasting impact on the world. ByteBuilder's remind us of the boundless possibilities of kids imagination.</p>
         </div>
-
-        <var></var>
         
         <div class="col2">
             <h3>Contact us</h3>
@@ -51,7 +127,7 @@
         </div>
     </div>
     
-</footer>
+    </footer>
 
  
 </body>

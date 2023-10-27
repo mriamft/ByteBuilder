@@ -1,0 +1,34 @@
+
+table, th, td {
+    border:1px solid black;
+    text-align: center;
+    padding: 5px;
+  }
+ 
+  .ScedContainer{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  table{
+    width: 90%;
+  }
+  
+  
+  table caption{
+    text-align: left;
+  }
+  
+  table th{
+    padding: 10px;
+  }
+  
+  td.timeSpan{
+    padding: 25px;
+  }
+   
+  td.off-day{
+    background-color: grey;
+  }
+  
