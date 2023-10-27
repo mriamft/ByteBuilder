@@ -1,13 +1,5 @@
 
-
-*{
-  box-sizing: border-box;
-margin: 0%;
-padding: 1%;
-text-decoration: none;
-color: black;
-}
-
+/**arrow code*/
 
 .kisds_table .container label img{
 position: absolute;
@@ -33,10 +25,9 @@ display: none;
 display:flex;
 
 }
-
-
+/***************registed kid table*********************/
 .kisds_table{
-
+  padding:1%;
 position: relative;
 width:50vw;
 align-items:center;
@@ -97,7 +88,7 @@ padding :1vw 1vw;
 
 
 
-/************************************************/
+/****************tutors*****************/
 
 
 
@@ -105,7 +96,7 @@ padding :1vw 1vw;
 .tutors_table{
 width:fit-content;
 justify-content: space-around;
-
+padding:1%;
 
 }
 
@@ -194,11 +185,11 @@ background-image: url(images/AI\ course\ image.jpg);
 
 }
 
-/***************************************/
+/*************courses*************/
 .courses_table{
   width:fit-content;
   justify-content: space-between;
-  
+  padding:1%;
   
   }
 
