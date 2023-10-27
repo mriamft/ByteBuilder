@@ -8,11 +8,14 @@ table, th, td {
   .ScedContainer{
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 50vh;
     
   }
 
   table{
     width: 90%;
+    box-shadow: 3px 4px 2px #c5e0e1;
   }
   
   

@@ -40,6 +40,7 @@ main{
 
 .course-card{
   border: 1px solid rgb(0, 0, 0);
+  box-shadow: 3px 4px 2px #c5e0e1;
   background-color: white;
   min-height: 14em;
   width: 20em;
