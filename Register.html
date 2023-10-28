@@ -40,12 +40,12 @@
 
             <form action="/action_page.php">
             <div class="title">
-            <h3>Kid's information:</h3>
+            <h2>Kid's information:</h2>
             </div>
             <div class="half">
                 <div class="item">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter full name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter kid's full name" required>
                 </div>
 
                 <div class="item">
@@ -53,12 +53,19 @@
                     <input type="date" id="dob" name="birthDate" required>
                 </div>
                 <div class="item">
-                    <label>Gender:</label>
-                    <div class="gender" >
-                        <input type="radio" id="male" name="gender" value="male">
-                        <label for="male">Male</label>
-                        <input type="radio" id="female" name="gender" value="male">
-                        <label for="female">Female</label>
+                    <div class="gender">
+                        <label>Gender:</label>
+                        <label class="rad-label">
+                            <input type="radio" class="rad-input" name="gender">
+                            <div class="rad-design"></div>
+                            <div class="rad-text">Male</div>
+                        </label>
+        
+                        <label class="rad-label">
+                            <input type="radio" class="rad-input" name="gender">
+                            <div class="rad-design"></div>
+                            <div class="rad-text">Female</div>
+                        </label>
                     </div>
                 </div>
 
@@ -69,7 +76,7 @@
 
             </div>
             <div class="title">
-                <h3>Contact information:</h3>
+                <h2>Contact information:</h2>
             </div>
             
             <div class="half">
@@ -80,7 +87,7 @@
 
                 <div class="item">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter full email address">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
             <div class="action">
                 <input type="submit" value="Add Kid">
