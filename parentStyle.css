@@ -37,12 +37,12 @@ align-items: center;
   display: flex;
   align-items:center;
   overflow-x: auto;
-  
+  justify-content: center;
   width: 95%;
-  margin: 4em auto;
   border-radius: 10px;
-  border-style:ridge;
+  border-style:hidden;
   background-color: #f9f9f9;
+  flex-wrap: wrap;
   
 
 }
@@ -126,4 +126,11 @@ align-items: center;
   text-align: center;
   text-shadow: 0  0 5px #999;
   font-size: xx-large;
+}
+
+#mykids {
+  color: #f7774c;
+  text-align: inherit;
+  padding-left: 12%;
+  padding-top: 5%;
 }
