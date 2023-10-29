@@ -17,9 +17,9 @@ body{
 
 header{
   display: flex;
-  justify-content:space-between ;
+  justify-content:space-around ;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 10px 100px;
   width: 100%;
   position: sticky;
   color: rgb(43, 43, 43);
@@ -39,7 +39,6 @@ main{
   font-weight: 900;
   font-size: 1.3em;
   list-style: none;
-  padding-left: 300px;
   display: flex;
   /* justify-content: space-between; Align the navbar links to the right */
 }
@@ -50,7 +49,7 @@ main{
 
 .navbar a{
   color: rgb(43, 43, 43);
-  padding-left: 50px;
+  padding-left: 1.5em;
 }
 
 /*action happens after click on list element*/
@@ -68,7 +67,6 @@ main{
 .navbar li a:hover:after{
   width:73%; /*length of the line appear*/
 }
-
 
 
 header ,footer{
