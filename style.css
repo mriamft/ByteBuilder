@@ -10,7 +10,7 @@
 
 body{
     background-color: rgb(248, 247, 247); /*the background color of the page*/
-    min-height: 100vh;
+        min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -70,7 +70,12 @@ main{
 
 
 header ,footer{
+<<<<<<< Updated upstream
   background-color: #eafdfe;
+=======
+  background-color: rgb(255, 239, 194);
+
+>>>>>>> Stashed changes
 }
 
 .container {

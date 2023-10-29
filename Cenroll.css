@@ -270,7 +270,11 @@ label span {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 3px 4px 2px #c5e0e1;
+<<<<<<< Updated upstream
     height: 22.75em ;
+=======
+    height: 23em ;
+>>>>>>> Stashed changes
     /*min-height: 13em;*/
     width:15em;
     overflow: hidden;
@@ -285,7 +289,10 @@ label span {
 
 .courseImage img{
     width: 100%;
+<<<<<<< Updated upstream
     padding-bottom: .5em;
+=======
+>>>>>>> Stashed changes
 
 }
 
@@ -301,16 +308,24 @@ label span {
     text-transform: uppercase;
     text-align: center;
     margin-top: .5em;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     margin-bottom: 2em;
 
 
 }
 
+<<<<<<< Updated upstream
 
 
 .course:hover{
     height: 34em;
+=======
+.course:hover{
+    height: 32.5em;
+>>>>>>> Stashed changes
 }
 
 

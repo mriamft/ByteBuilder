@@ -1,18 +1,330 @@
 
 
 
+<<<<<<< Updated upstream
 
 .kisds_table .container label img{
+=======
+/**arrow code*/
+
+.kisds_table .container label img{
+position: absolute;
+right:0%;
+left:93%;
+bottom: 0.1%;
+flex-shrink: 0;
+background-color: rgb(206, 173, 130);
+width:8%
+}
+
+#checked{
+display: none;
+}
+
+
+.kid.appear {
+  display: none;
+
+}
+#checked:checked ~ .kid.appear{
+
+display:flex;
+
+}
+/***************registed kid table*********************/
+.kisds_table{
+  padding:1%;
+position: relative;
+width:80%;
+display:flex;
+align-self:center;
+flex-direction: column;
+margin:1%;
+}
+
+.heading {
+background-color:#ffd7ba;
+
+display:flex;
+justify-content:left;
+align-items:center;
+padding-left: 2vw;
+border-radius: 4%;
+width:85%;
+}
+
+
+.container{
+background-color:#fffcf2;
+
+
+flex-wrap: wrap;
+width: 85%;
+padding:1vw ;
+flex-shrink: 1;
+position: relative;
+}
+
+
+.kid {
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  background-color:#d2ebeb;
+  
+  justify-content:flex-start;
+  border-radius: 10%;
+  background-clip:content-box;
+  margin: 0.5%
+ 
+}
+
+
+
+.kid  h4 {
+  padding :3vw 0vw;
+text-align: center;  
+
+
+}
+.container  img {
+width:8vw;
+float:left;
+background-color:white;
+background-clip: content-box;
+
+border-radius: 50%;
+padding :1vw 1vw;
+
+}
+
+
+
+
+/****************tutors*****************/
+
+
+
+
+.tutors_table{
+width:80%;
+align-self: center;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+
+.tutor_card{
+background-color: azure;
+background-clip:padding-box;
+display:flex;
+border-radius: 3vw;
+width:fit-content;
+margin: 0.5%;
+
+}
+.tutor_info{
+  display:flex;
+  flex-direction: column;
+  padding :1vw 1vw;
+}
+
+.tutor img{
+  
+float:left;
+padding :1vw 1vw;
+
+}
+
+.tutor_courses {
+display: flex;
+flex-direction: column;
+width: fit-content;
+padding:2vw;
+background-color: rgb(234, 231, 220);
+background-clip: content-box;
+height: fit-content;
+
+
+}
+.tutor_courses h4{
+background-color: rgb(168, 148, 123);
+width:100%;
+border-bottom:  0.3vw black solid;
+text-align: center;
+}
+
+.list{
+list-style-position: inside;
+list-style:none;
+text-align:center;
+padding:1vw;
+font-weight:2vw;
+text-indent: 3.5vw;
+}
+
+
+.list li{
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-size: 20% 100%,cover;
+  padding: 1%;
+}
+li.java{
+  background-image: url(images/coding-language-java.jpg);
+
+}
+
+li.python{
+  background-image: url(images/python.png);  
+
+}
+li.robotics{
+  background-image: url(images/roboticimages.jpg);  
+
+}
+li.c{
+
+  background-image: url(images/C++.png);
+}
+
+li.AI{
+background-image: url(images/AI\ course\ image.jpg);  
+
+
+}
+
+li.Front-end {
+  background-image: url(images/front-end-web.png);
+}
+li.scratsh{
+  background-image: url(images/Scratch-square-full.jpg);
+
+}
+li.arduino{
+  background-image: url(images/technology-wallpaper1.jpg);
+
+}
+li.Flutter{
+  background-image: url(images/flatterimage.png);
+}
+/*************courses*************/
+.courses_table{
+  padding:1%;
+  width:80%;
+  margin: 0%;
+  align-self: center;
+  }
+
+
+
+.courses_card{
+  background-color: rgb(219, 199, 173);
+  background-clip: content-box;
+flex-wrap: wrap;
+  display:flex;
+flex-direction: column;
+flex-shrink: 1;
+border-radius: 2%;
+margin: 1%;
+width:40%;
+
+}
+
+
+
+.name{  
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+margin-bottom: 2%;
+border-bottom: solid black 0.2vw;
+justify-content: space-around;
+}
+
+
+
+.courses_card img{
+padding: 0%;
+width:60%;
+border: white 0.5vw solid;
+border-radius: 2vw;
+align-self:center;
+margin-bottom: 2%;
+
+}
+
+.student h4{
+background-color: aliceblue;
+background-size: contain;
+align-items: center;
+padding: 1%;
+
+}
+
+
+.student{
+background-color: beige;
+width: fit-content;
+align-self: center;
+padding:0%;
+margin: 1%;
+
+}
+
+.student .list li{
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-size: 10% 100%,cover;
+  text-indent: 10%;
+  padding:1% ;
+text-align: center;
+font-size:70%;
+}
+
+.list .girl{
+background-image: url(images/daughter.png);
+
+
+}
+
+.list .boy{
+background-image: url(images/son.png);
+
+}
+.link {
+color: black;
+font-weight: bolder;
+text-decoration: underline;
+text-align: center;
+}
+
+
+a.link:hover{
+  color: blue;
+}
+
+
+.courses_table .container label  img{
+>>>>>>> Stashed changes
   position: absolute;
   right:0%;
   left:93%;
   bottom: 0.1%;
   flex-shrink: 0;
   background-color: rgb(206, 173, 130);
+<<<<<<< Updated upstream
   width:8%;
   }
   
   #checked{
+=======
+  width:7%
+  }
+
+  #ch{
+>>>>>>> Stashed changes
   display: none;
   }
   
