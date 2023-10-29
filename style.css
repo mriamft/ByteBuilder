@@ -39,6 +39,12 @@ main{
   position: relative; /* Add this line */
 }
 
+
+  a {
+  text-decoration: none;
+  }
+
+  
 .navbar ul {
   font-weight: 900;
   font-size: 1.3em;
