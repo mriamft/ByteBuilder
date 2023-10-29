@@ -34,7 +34,8 @@ form{
   box-shadow: 1px 1px 8px 1px rgb(219, 219, 206);
 }
 
-form .title h2{
+
+form .title {
   letter-spacing: 2px;
   border-bottom: 1px solid rgb(218, 159, 41);
   display: inline-block;
@@ -42,17 +43,79 @@ form .title h2{
   margin-bottom: 32px;
 }
 
-form .half{
-  flex-direction: column;
-  display: flex;
-  justify-content: space-between;
-}
 
-form .half .item{
+form .item{
   flex-direction: column;
   display: flex;
   margin-bottom: 24px;
   width: 48%;
+}
+
+
+form label{
+  display: block;
+  margin-bottom: 16px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+
+form .item input{
+  border-radius: 4px;
+  border: 1px solid rgb(255, 219, 154);
+  outline: 0;
+  padding: 16px;
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  font-size: 17px;
+  transition: background-color 0.2s;
+}
+
+
+form .action {
+  display: flex;
+  justify-content: center;
+}
+
+
+form .action input{
+  box-sizing: border-box;
+  font-size: 1.3em;
+  font-weight: 600;
+  border-radius:10px;
+  border-style: solid;
+  background-color:rgb(255, 219, 154);
+  border-color: rgb(255, 219, 154);
+  padding: 10px 25px;
+  margin-top: 25px;
+  letter-spacing: 3px;
+  color: rgb(68, 49, 15);
+  text-align: center;
+  transition: all 0.3S ease;
+}
+
+
+form .item input:focus {
+  box-shadow: 1px 1px 5px 1px rgb(219, 219, 206);
+}
+
+
+form .action input:hover{
+  background: rgb(247, 203, 120);
+  color: rgb(29, 20, 5); ;
+  box-shadow: 1px 1px 5px 1px rgb(219, 219, 206);
+}
+
+
+form .action input:active{
+  transform: scale(0.9);
+  box-shadow: 1px 1px 8px 1px rgb(219, 219, 206);
+}
+
+
+form .item input:hover{
+background: rgba(255, 225, 182, 0.639);
 }
 
 
@@ -116,88 +179,6 @@ form .half .item{
   font-weight: 400;
   transition: .2s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-form label{
-  display: block;
-  margin-bottom: 16px;
-  font-size: 1.1em;
-  font-weight: 500;
-}
-
-form .half .item input{
-  border-radius: 4px;
-  border: 1px solid rgb(255, 219, 154);
-  outline: 0;
-  padding: 16px;
-  width: 100%;
-  height: 44px;
-  background: transparent;
-  font-size: 17px;
-  transition: background-color 0.2s;
-}
-
-form .action{
-  margin-top: 1.5em;
-  align-self: center;
-}
-
-form .action input{
-  background: transparent;
-  border-radius: 10px;
-  box-sizing: border-box;
-  border: solid rgb(255, 219, 154);
-  cursor: pointer;
-  font-size: 1.3em;
-  font-weight: 600;
-  height: 44px;
-  letter-spacing: 3px;
-  outline: 0;
-  padding: 0 25px 0 25px;
-  margin-top: 15px;
-}
-
-form .action input{
-  background: rgb(255, 219, 154);
-  box-sizing: content-box;
-  color: rgb(68, 49, 15);
-  transition: box-shadow 0.3s ease-in-out;
-  text-align: center;
-  transition: background-color 0.2s;
-  transition: all 0.3 ease;
-}
-
-
-form .half .item input:focus {
-  box-shadow: 1px 1px 5px 1px rgb(219, 219, 206);
-}
-
-  form .action input:hover{
-    background: rgb(247, 203, 120);
-    color: rgb(29, 20, 5); ;
-    box-shadow: 1px 1px 5px 1px rgb(219, 219, 206);
-  }
-  form .action input:active{
-    transform: scale(0.9);
-    box-shadow: 1px 1px 8px 1px rgb(219, 219, 206);
-  }
- form .half .item input:hover{
-  background: rgba(255, 225, 182, 0.639);
-
-  
-}
-
-
 
 
 
