@@ -1,4 +1,5 @@
 
+
 /**arrow code*/
 
 .kisds_table .container label img{
@@ -37,7 +38,8 @@
   }
   
   .heading {
-  background-color: aqua;
+  background-color:#ffd7ba;
+  
   display:flex;
   justify-content:left;
   align-items:center;
@@ -48,7 +50,9 @@
   
   
   .container{
-  background-color: antiquewhite;
+  background-color:#fffcf2;
+  
+  
   flex-wrap: wrap;
   width: 85%;
   padding:1vw ;
@@ -61,7 +65,8 @@
   
     display: inline-flex;
     flex-wrap: wrap;
-    background-color: rgb(183, 151, 109);
+    background-color:#d2ebeb;
+    
     justify-content:flex-start;
     border-radius: 10%;
     background-clip:content-box;
@@ -80,7 +85,7 @@
   .container  img {
   width:8vw;
   float:left;
-  background-color: antiquewhite;
+  background-color:white;
   background-clip: content-box;
   
   border-radius: 50%;
