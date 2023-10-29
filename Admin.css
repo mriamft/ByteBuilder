@@ -9,7 +9,7 @@
   bottom: 0.1%;
   flex-shrink: 0;
   background-color: rgb(206, 173, 130);
-  width:8%
+  width:8%;
   }
   
   #checked{
@@ -38,7 +38,7 @@
   }
   
   .heading {
-  background-color:#ffd7ba;
+  background-color:#d2ebeb;
   
   display:flex;
   justify-content:left;
@@ -65,7 +65,7 @@
   
     display: inline-flex;
     flex-wrap: wrap;
-    background-color:#d2ebeb;
+    background-color:#eef2f3;
     
     justify-content:flex-start;
     border-radius: 10%;
@@ -144,7 +144,7 @@
   
   }
   .tutor_courses h4{
-  background-color: rgb(168, 148, 123);
+  background-color: #d2ebeb;
   width:100%;
   border-bottom:  0.3vw black solid;
   text-align: center;
@@ -185,7 +185,7 @@
   }
   
   li.AI{
-  background-image: url(images/AI\ course\ image.jpg);  
+  background-image: url(images/AI_course_image.jpg);  
   
   
   }
@@ -251,7 +251,7 @@
   }
   
   .student h4{
-  background-color: aliceblue;
+  background-color: #d2ebeb;
   background-size: contain;
   align-items: center;
   padding: 1%;
