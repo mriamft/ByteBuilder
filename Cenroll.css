@@ -192,7 +192,9 @@ ul.list {
 
 li:first-child {
     padding-top: 0;
+
 }
+
 
 li:last-child {
     padding-bottom: 0;
@@ -200,7 +202,6 @@ li:last-child {
 }
 
 label {
-
     display: flex;
     cursor: pointer;
     justify-content: space-between;
