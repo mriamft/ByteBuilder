@@ -55,7 +55,7 @@
     cursor: pointer;
     padding: 0 10px; /* Add some padding */
     box-sizing: border-box; /* Include padding in width calculation */
-    test-align: left;
+    text-align: left;
 
 }
 
@@ -328,7 +328,7 @@ label span {
 
 }
 .action input{
-    background: rgb(255, 219, 154);
+    background-color: rgb(255, 219, 154);
     color: rgb(68, 49, 15);
     transition: box-shadow 0.3s ease-in-out;
     justify-items: center;
