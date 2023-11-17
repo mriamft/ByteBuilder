@@ -167,3 +167,45 @@ transform: scale(1.1);
 color: rgb(255, 196, 0);
 }
 
+@media (max-width: 743px) {
+  .navbar {
+    padding-right: 1.5em;
+  }
+
+  .navbar ul li a {
+    font-size: .6em;
+  }
+
+ 
+  .title{
+    font-size: 1rem;
+  }
+
+  .vision p{
+    font-size: .7em;
+  }
+
+  .course-card{
+    width: 7em;
+  }
+
+  .courses-desc{
+    font-size: 0.3em;
+  }
+  
+  .course-title{
+    font-size: .6em;
+  }
+
+  .rating {
+    font-size: .5em;
+    }
+}
+    
+@media (max-width: 617px) {
+  .navbar ul li:first-child a {
+    color: red;
+  }
+
+}
+
