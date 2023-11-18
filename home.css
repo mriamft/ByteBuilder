@@ -176,6 +176,10 @@ color: rgb(255, 196, 0);
     font-size: 1.6em;
   }
 
+  .vision {
+    min-height: 40vh;
+  } 
+
   .vision p{
     font-size: 1.3em;
   }
@@ -185,24 +189,254 @@ color: rgb(255, 196, 0);
   }
 
   .courses-desc{
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   
   .course-title{
-    font-size: .9em;
+    font-size: 1em;
   }
 
   .course-info.fa {
     font-size: 100px; 
   }
 }
-    
-@media (max-width: 617px) {
-  .navbar ul li:first-child a {
-    color: red;
+
+@media (max-width: 696px) {
+  .vision {
+    min-height: 40vh; 
+  }
+
+  .course-card{
+    width: 15rem;
+  }
+
+
+
+  .parentBox {
+    width: 70%;
+    height: auto;
+  }
+
+  .col1 h3, .col2 h3, .col3 h3 {
+  font-size: 1em;
+  }
+
+  .col1 p, .col2 ul li, .col2 span, .col3 p {
+  font-size: .9em;
   }
 
 }
+
+  
+@media (max-width: 618px) {
+  .navbar ul li:first-child a {
+    color: red;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .title{
+    font-size: 1.4em;
+  }
+
+  .vision p{
+    font-size: 1.2em;
+  }
+
+  .vision {
+    min-height: 35vh; /* Adjust the value as desired */
+  }
+
+  .course-card{
+    width: 15em;
+  }
+
+   .name-user strong {
+    font-size: .9rem;
+  }
+
+  .parent-comment {
+    font-size: .8rem;
+  }
+  }
+
+  @media (max-width: 560px) {
+    .vision {
+      min-height: 30vh; /* Adjust the value as desired */
+    }
+    .course-card{
+      width: 14em;
+    }
+
+    .col2 img {
+      width: 13px; /* Adjust the width value as per your requirement */
+    }
+  }
+
+  @media (max-width: 530px) {
+
+    .navbar li a {
+      font-size: .9em;
+    }
+
+    .course-card{
+      width: 13em;
+    }
+
+    .col1 h3, .col2 h3, .col3 h3 {
+    font-size: .8em;
+    }
+    
+      .col1 p, .col2 span, .col3 p {
+      font-size: .7em;
+      }
+
+      
+    
+  }
+
+  .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar {
+      display: none;
+    }
+  
+    .navbar.active {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .navbar.active li {
+      margin: 10px 0;
+    }
+  
+    .menu-button {
+      display: block;
+    }
+
+    .course-card{
+      width: 11em;
+    }
+
+    .courses-desc{
+      font-size: 0.7em;
+    }
+    
+    .course-title{
+      font-size: .9em;
+    }
+
+    
+  .title{
+    font-size: 1.4em;
+  }
+
+  .vision {
+    min-height: 25vh;
+  } 
+
+  .vision p{
+    font-size: 1em;
+  }
+
+  .parentBox {
+    width: 70%;
+    height: auto;
+  }
+
+  .name-user strong {
+    font-size: .8rem;
+  }
+
+  .parent-comment {
+    font-size: .7rem;
+  }
+
+  .course-card .fa-star {
+    font-size: .8rem;
+  }
+  
+  
+  }  
+
+  @media screen and (max-width: 470px) {
+    .parentBox {
+      transform: scale(1);
+    }
+  
+    .parent-comment p {
+      font-size: .7rem;
+    }
+    .reviews .fa-star {
+      font-size: .7rem;
+    }
+  }
+
+  @media screen and (max-width:380px) {
+
+    .title{
+      font-size: 1.3em;
+    }
+  
+    .vision {
+      min-height: 20vh;
+    } 
+  
+    .vision p{
+      font-size: .8em;
+    }
+    .course-card{
+      width: 9em;
+    }
+
+    .courses-desc{
+      font-size: 0.5em;
+    }
+    
+    .course-title{
+      font-size: .7em;
+    }
+
+    .col1 h3, .col2 h3, .col3 h3 {
+      font-size: .6em;
+      }
+      
+        .col1 p, .col2 span, .col3 p {
+        font-size: .5em;
+        }
+
+        .col2 img {
+          width: 10px; /* Adjust the width value as per your requirement */
+        }
+  }
+
+  @media screen and (max-width: 280px) {
+    
+    .title{
+      font-size: 1em;
+    }
+  
+    .vision {
+      min-height: 15vh;
+    } 
+  
+    .vision p{
+      font-size: .5em;
+    }
+    .course-card{
+      width:6em;
+    }
+  }
+
 
 @media (max-width: 7px) {
 
@@ -217,5 +451,12 @@ color: rgb(255, 196, 0);
   .vision p{
     font-size: .7em;
   }
+
+  
+
+  .parentBox{
+    width: 10px;
+    
+    }
 }
 }
