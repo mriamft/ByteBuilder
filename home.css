@@ -167,6 +167,26 @@ transform: scale(1.1);
 color: rgb(255, 196, 0);
 }
 
+@media screen and (max-width:1023px) {
+  /* header{
+    padding: 12px 20px;
+  } */
+
+  .navbar a{
+    padding-left: 1em;
+  }
+
+  /* section{
+    padding: 80px 20px;
+  } */
+
+  .content{
+    flex-direction: column;
+    align-items: center;
+  }
+   
+}
+
 @media (max-width: 743px) {
   .navbar {
     padding-right: 1.5em;
@@ -183,7 +203,7 @@ color: rgb(255, 196, 0);
   .vision p{
     font-size: 1.3em;
   }
-
+/* 
   .course-card{
     width: 12em;
   }
@@ -194,7 +214,7 @@ color: rgb(255, 196, 0);
   
   .course-title{
     font-size: 1em;
-  }
+  } */
 
   .course-info.fa {
     font-size: 100px; 
@@ -206,7 +226,7 @@ color: rgb(255, 196, 0);
     min-height: 40vh; 
   }
 
-  .course-card{
+  /* .course-card{
     width: 15rem;
   }
 
@@ -215,7 +235,7 @@ color: rgb(255, 196, 0);
   .parentBox {
     width: 70%;
     height: auto;
-  }
+  } */
 
   .col1 h3, .col2 h3, .col3 h3 {
   font-size: 1em;
@@ -229,44 +249,51 @@ color: rgb(255, 196, 0);
 
   
 @media (max-width: 618px) {
+
+  body{
+    font-size: 12px;
+  }
+
   .navbar ul li:first-child a {
     color: red;
     display: inline-block;
     text-align: center;
   }
 
-  .title{
+  /* .title{
     font-size: 1.4em;
   }
 
   .vision p{
     font-size: 1.2em;
-  }
+  } */
 
   .vision {
     min-height: 35vh; /* Adjust the value as desired */
   }
 
-  .course-card{
+  /* .course-card{
     width: 15em;
-  }
-
+  } */
+/* 
    .name-user strong {
     font-size: .9rem;
   }
 
   .parent-comment {
     font-size: .8rem;
-  }
+  } */
+
+  
   }
 
   @media (max-width: 560px) {
     .vision {
       min-height: 30vh; /* Adjust the value as desired */
     }
-    .course-card{
+    /* .course-card{
       width: 14em;
-    }
+    } */
 
     .col2 img {
       width: 13px; /* Adjust the width value as per your requirement */
@@ -279,9 +306,9 @@ color: rgb(255, 196, 0);
       font-size: .9em;
     }
 
-    .course-card{
+    /* .course-card{
       width: 13em;
-    }
+    } */
 
     .col1 h3, .col2 h3, .col3 h3 {
     font-size: .8em;
@@ -327,39 +354,39 @@ color: rgb(255, 196, 0);
       width: 11em;
     }
 
-    .courses-desc{
+    /* .courses-desc{
       font-size: 0.7em;
     }
     
     .course-title{
       font-size: .9em;
-    }
-
+    } */
+/* 
     
   .title{
     font-size: 1.4em;
-  }
+  } */
 
   .vision {
     min-height: 25vh;
   } 
 
-  .vision p{
+  /* .vision p{
     font-size: 1em;
-  }
+  } */
 
-  .parentBox {
+  /* .parentBox {
     width: 70%;
     height: auto;
   }
-
-  .name-user strong {
+/*  */
+  /* .name-user strong {
     font-size: .8rem;
-  }
+  } */
 
-  .parent-comment {
+  /* .parent-comment {
     font-size: .7rem;
-  }
+  } */ 
 
   .course-card .fa-star {
     font-size: .8rem;
@@ -369,33 +396,48 @@ color: rgb(255, 196, 0);
   }  
 
   @media screen and (max-width: 470px) {
+    .navbar ul {
+      font-size: 1em;
+    }
     .parentBox {
       transform: scale(1);
     }
-  
+/*   
     .parent-comment p {
       font-size: .7rem;
-    }
+    } */
     .reviews .fa-star {
       font-size: .7rem;
     }
+
+    /* .course-card{
+      width: 10em;
+    } */
+/* 
+    .courses-desc{
+      font-size: 0.6em;
+    }
+    
+    .course-title{
+      font-size: .7em;
+    } */
   }
 
-  @media screen and (max-width:380px) {
+  @media screen and (max-width:3950px) {
 
-    .title{
+    /* .title{
       font-size: 1.3em;
-    }
+    } */
   
     .vision {
       min-height: 20vh;
     } 
   
     .vision p{
-      font-size: .8em;
-    }
+      font-size: .8em;}
+    /* }
     .course-card{
-      width: 9em;
+      width: 8.5em;
     }
 
     .courses-desc{
@@ -404,7 +446,7 @@ color: rgb(255, 196, 0);
     
     .course-title{
       font-size: .7em;
-    }
+    } */
 
     .col1 h3, .col2 h3, .col3 h3 {
       font-size: .6em;
@@ -420,21 +462,50 @@ color: rgb(255, 196, 0);
   }
 
   @media screen and (max-width: 280px) {
+      .logo img {
+        width: 7em; 
+        height: auto;
+      }
     
-    .title{
+    /* .title{
       font-size: 1em;
-    }
+    } */
   
     .vision {
       min-height: 15vh;
     } 
   
-    .vision p{
+    /* .vision p{
       font-size: .5em;
-    }
-    .course-card{
+    } */
+    /* .course-card{
       width:6em;
     }
+
+    .courses-desc{
+      font-size: 0.4em;
+    }
+    
+    .course-title{
+      font-size: .5em;
+    } */ 
+
+/*     
+  .name-user strong {
+    font-size: .6rem;
+  }
+
+  .parent-comment {
+    font-size: .4rem;
+  } */
+
+  .course-card .fa-star {
+    font-size: .5rem;
+  }
+
+  .reviews .fa-star {
+    font-size: .5rem;
+  }
   }
 
 
@@ -442,21 +513,22 @@ color: rgb(255, 196, 0);
 
 .navbar ul li a {
   font-size: .6em;
+}
 
-  
+/*   
   .title{
     font-size: 1rem;
   }
 
   .vision p{
     font-size: .7em;
-  }
+  } */
 
-  
+/*   
 
   .parentBox{
     width: 10px;
     
-    }
+    } */
 }
 }
