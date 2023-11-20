@@ -30,6 +30,11 @@ header{
   text-decoration: none; /* Add this line to remove the underline */
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 main{
   display: flex;
   flex-direction: column;
