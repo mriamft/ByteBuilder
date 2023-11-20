@@ -162,3 +162,119 @@ ul.breadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
 }
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+@media (max-width: 743px) {
+  .navbar {
+    padding-right: 1.5em;
+  }
+}
+
+@media (max-width: 696px) {
+  .col1 h3, .col2 h3, .col3 h3 {
+    font-size: 1em;
+    }
+  
+    .col1 p, .col2 ul li, .col2 span, .col3 p {
+    font-size: .9em;
+    }
+}
+@media (max-width: 618px) {
+
+  .navbar ul li:first-child a {
+  display: inline-block;
+  text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .col2 img {
+    width: 13px; 
+  }
+}
+
+
+@media (max-width: 530px) {
+
+  .navbar li a {
+    font-size: .9em;
+  }
+
+  .col1 h3, .col2 h3, .col3 h3 {
+    font-size: .8em;
+  }
+  
+  .col1 p, .col2 span, .col3 p {
+    font-size: .7em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar.active {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar.active li {
+    margin: 10px 0;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+@media screen and (max-width: 470px) {
+  .navbar li a {
+    font-size: .8em;
+  }
+  .col1 h3, .col2 h3, .col3 h3 {
+    font-size: .8em;
+  }
+    
+  .col1 p, .col2 span, .col3 p {
+    font-size: .6em;
+  }
+
+  .col2 img {
+    width: .7rem; 
+  }
+}
+
+
+@media screen and (max-width:380px) {
+  .navbar li a {
+    font-size: .6em;
+  }
+
+  .col1 h3, .col2 h3, .col3 h3 {
+    font-size: .6em;
+  }
+    
+  .col1 p, .col2 span, .col3 p {
+    font-size: .4em;
+  }
+
+  .col2 img {
+    width: .5rem; 
+  }
+      
+}
+
+
+@media screen and (max-width: 280px) {
+  .logo img {
+    width: 7rem;
+    height: auto;
+  }
+}
