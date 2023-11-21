@@ -72,6 +72,8 @@ function validate() {
             
         }
 
+        
+
     
     // let name = document.forms["myForm"]["name"].value;
     // if (name.value.match(/[0-9]*/)) {
