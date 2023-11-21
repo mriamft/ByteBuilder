@@ -1,3 +1,5 @@
+var registeredNames = [];
+
 function validate() {
 
     var empt="";
@@ -68,26 +70,69 @@ function validate() {
                 return false;
             }
 
-            localStorage.setItem('name',name.value);
-            localStorage.setItem('DOB',dob.value);
-            localStorage.setItem('Gender',gender);
-            localStorage.setItem('Phone',phone.value);
-            localStorage.setItem('Email',email.value);
-            var file = fileInput.files[0];
-  var reader = new FileReader();
+            var registeredNames = JSON.parse(localStorage.getItem('registeredNames')) || [];
+            registeredNames.push(name);
+            localStorage.setItem('registeredNames', JSON.stringify(registeredNames));
 
-  reader.onload = function (event) {
-    var imageData = event.target.result;
-    localStorage.setItem("imageData", imageData);
-  };
+            printChildInfo(name);
 
-  reader.readAsDataURL(file);
+            // localStorage.setItem('name',name.value);
+            // localStorage.setItem('DOB',dob.value);
+            // localStorage.setItem('Gender',gender);
+            // localStorage.setItem('Phone',phone.value);
+            // localStorage.setItem('Email',email.value);
+            // var file = fileInput.files[0];
+            // var reader = new FileReader();
+
+            //     reader.onload = function (event) {
+            //     var imageData = event.target.result;
+            //     localStorage.setItem("imageData", imageData);
+            //     };
+
+            // reader.readAsDataURL(file);
 
          
             return true;
 
             
         }
+
+  function printChildInfo(name) {
+    var childInfoPrint = document.createElement("div");
+  
+    // Display the registered names as an array
+    var registeredNames = JSON.parse(localStorage.getItem('registeredNames')) || [];
+    childInfoPrint.innerHTML = `
+      <h3>Registered Names</h3>
+      <p>${registeredNames}</p>
+    `;
+  
+    // Retrieve the uploaded file
+    var uploadedFile = document.getElementById("img").files[0];
+    var fileURL = URL.createObjectURL(uploadedFile);
+  
+    // Display the uploaded file
+    childInfoPrint.innerHTML += `
+      <h3>Uploaded File</h3>
+      <img src="${fileURL}" alt="Uploaded File">
+    `;
+  
+    // Create a new window for printing
+    var printWindow = window.open("", "_blank");
+    printWindow.document.open();
+  
+    // Write the child information to the print window
+    printWindow.document.write("<html><head><title>Child Information</title></head><body>");
+    printWindow.document.write("<h3>Child Information</h3>");
+    printWindow.document.write(childInfoPrint.innerHTML);
+    printWindow.document.write("</body></html>");
+  
+    printWindow.document.close();
+  
+    // Trigger the print dialog
+    printWindow.print();
+    printWindow.close();
+  }
 
         
 
