@@ -42,6 +42,14 @@ function validate() {
 
             // gender.checked ? gender="Male" : gender="Female";
 
+
+            var fileInput = document.getElementById("img");
+            if (fileInput.value === empt) {
+                alert("Please upload a file.");
+                return false;
+            }
+
+
             //phone number validate
             var phone = document.getElementById("phone");
             if (phone.value === empt) {
@@ -64,7 +72,16 @@ function validate() {
             localStorage.setItem('DOB',dob.value);
             localStorage.setItem('Gender',gender);
             localStorage.setItem('Phone',phone.value);
-            localStorage.setItem('Email',email.value)
+            localStorage.setItem('Email',email.value);
+            var file = fileInput.files[0];
+  var reader = new FileReader();
+
+  reader.onload = function (event) {
+    var imageData = event.target.result;
+    localStorage.setItem("imageData", imageData);
+  };
+
+  reader.readAsDataURL(file);
 
          
             return true;
