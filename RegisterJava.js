@@ -1,40 +1,48 @@
 function validateForm() {
 
-            var name = document.getElementById("name");
-            var dob = document.getElementById("dob");
-            var gender = document.querySelector('input[name="gender"]:checked');
-            var phone = document.getElementById("phone");
-            var email = document.getElementById("email");
+    var empt="";
 
-            // Perform validation
-            if (name.value === "") {
+            //name
+            var name = document.getElementById("name");
+            if (name.value === empt) {
                 alert("Please enter the kid's name.");
                 return false;
             }
 
-            if (/^\d/.test(name.value)) {
+            //name Start With Letter
+            if (/^[0-9]/.test(name.value)) {
                 alert("Kid's name cannot start with a number.");
                 return false;
             }
 
-            var currentYear = new Date().getFullYear();
-            var kidYear = new Date(dob.value).getFullYear();
-            if (kidYear > currentYear - 6) {
-                alert("Children younger than 6 years old are not accepted.");
+            //dob validate
+            var dob = document.getElementById("dob");
+            if (new Date(dob.value).getFullYear() > 2017) {
+                alert("Children under the age of 6 are not accepted, sorry!");
                 return false;
             }
 
+            //gender validate
+            var gender = document.querySelector('input[name="gender"]:checked');
             if (!gender) {
                 alert("Please select the kid's gender.");
                 return false;
             }
 
+            //phone number validate
+            var phone = document.getElementById("phone");
+            if (phone.value === empt) {
+                alert("Please enter the phone number.");
+                return false;
+            }
             if (phone.value.length !== 10) {
-                alert("Phone number should contain 10 digits.");
+                alert("Phone number should be 10 digits.");
                 return false;
             }
 
-            if (email.value === "") {
+            //email validate
+            var email = document.getElementById("email");
+            if (email.value === empt) {
                 alert("Please enter your email address.");
                 return false;
             }
