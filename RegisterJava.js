@@ -1,4 +1,4 @@
-function validateForm() {
+function validate() {
 
     var empt="";
 
@@ -8,6 +8,7 @@ function validateForm() {
                 alert("Please enter the kid's name.");
                 return false;
             }
+
 
             //name Start With Letter
             if (/^[0-9]/.test(name.value)) {
@@ -23,11 +24,23 @@ function validateForm() {
             }
 
             //gender validate
-            var gender = document.querySelector('input[name="gender"]:checked');
-            if (!gender) {
+            var genderTemp = document.querySelector('input[name="gender"]:checked');
+            if (!genderTemp) {
                 alert("Please select the kid's gender.");
                 return false;
             }
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+
+            // var gender =document.getElementsByName('gender')
+            // gender.forEach(function(radio){
+            //     radio.addEventListener('change',function(){
+            //         if(radio.checked){
+            //             localStorage('Gendeer',radio.checked)
+            //         }
+            //     });
+            // });
+
+            // gender.checked ? gender="Male" : gender="Female";
 
             //phone number validate
             var phone = document.getElementById("phone");
@@ -47,8 +60,18 @@ function validateForm() {
                 return false;
             }
 
+            localStorage.setItem('name',name.value);
+            localStorage.setItem('DOB',dob.value);
+            localStorage.setItem('Gender',gender);
+            localStorage.setItem('Phone',phone.value);
+            localStorage.setItem('Email',email.value)
+
+         
             return true;
+
+            
         }
+
     
     // let name = document.forms["myForm"]["name"].value;
     // if (name.value.match(/[0-9]*/)) {
