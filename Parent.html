@@ -31,6 +31,24 @@
         <h2 >Parent Dashboard</h2>
     </div>
 
+
+    
+        
+      <!--change theme -->
+      <form action="" class="color-picker" style="display: none;">
+        <fieldset>
+          <legend class="visually-hidden"> pick a color scheme </legend>
+          <label for="light" class="visually-hidden"> light</label>
+          <input type="radio" name="theme" id="light" checked>
+  
+          <label for="dark" class="visually-hidden"> dark</label>
+          <input type="radio" name="theme" id="dark" >
+  
+  
+        </fieldset>
+       </form>
+  
+
     <h1 id="mykids">My Kids:</h1>
     <div class="kidscontainer">
 
@@ -105,6 +123,56 @@
     </div>
     
 </footer>
+
+
+   
+<script>
+
+
+    const colorThemes=document.querySelectorAll('[name="theme"]');
+    
+
+    //store the theme
+
+    const storeTheme=function(theme){
+      localStorage.setItem("theme",theme);
+
+    };
+
+
+
+    //apply the theme
+
+    const retrieveTheme = function(){
+    const activeTheme = localStorage.getItem("theme");
+
+    colorThemes.forEach((themeOption) => {
+    if (themeOption.id === activeTheme){
+      themeOption.checked = true;
+    }
+
+    });
+
+
+    };
+
+
+    colorThemes.forEach(themeOption =>{
+    themeOption.addEventListener('click',()=>{
+      storeTheme(themeOption.id);
+    });
+    });
+
+
+    //apply the theme
+
+    document.onload = retrieveTheme();
+
+
+
+ 
+</script>
+  
 
  
 </body>

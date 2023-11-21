@@ -25,12 +25,36 @@
     <button class="menu-button">&#9776;</button>
   </header>
   <main>
+
+ 
+
+
     <div class="vision">
        <!-- <img src="images/visionImage.webp" alt="visionary"> -->
         <h3 class="title">Our Vision</h3>
         <p>ByteBuilder is a new frontier in children's education, where learning becomes a captivating adventure. Through interactive games and engaging content, we inspire curiosity, foster creativity, and empower young minds to explore and thrive in a digital world. Join us on this exciting journey of discovery and unlock the joy of learning for every child.</p>
     </div>
-    <hr>
+    <div>
+     
+      <!--change theme -->
+      <form action="" class="color-picker">
+       <fieldset>
+         <legend class="visually-hidden"> pick a color scheme </legend>
+         <label for="light" class="visually-hidden"> light</label>
+         <input type="radio" name="theme" id="light" checked>
+ 
+         <label for="dark" class="visually-hidden"> dark</label>
+         <input type="radio" name="theme" id="dark" >
+ 
+ 
+       </fieldset>
+      </form>
+ 
+     </div>
+
+
+
+   
     <section class="courses">
       <h2 class="title">Courses</h2>
       <div class="content">
@@ -292,6 +316,54 @@
     </div>
     
 </footer>
+
+
+<script>
+
+
+    const colorThemes=document.querySelectorAll('[name="theme"]');
+    
+
+    //store the theme
+
+    const storeTheme=function(theme){
+      localStorage.setItem("theme",theme);
+
+    };
+
+
+
+    //apply the theme
+
+    const retrieveTheme = function(){
+    const activeTheme = localStorage.getItem("theme");
+
+    colorThemes.forEach((themeOption) => {
+    if (themeOption.id === activeTheme){
+      themeOption.checked = true;
+    }
+
+    });
+
+
+    };
+
+
+    colorThemes.forEach(themeOption =>{
+    themeOption.addEventListener('click',()=>{
+      storeTheme(themeOption.id);
+    });
+    });
+
+
+    //apply the theme
+
+    document.onload = retrieveTheme();
+
+
+
+ 
+</script>
   
 </body>
 </html>
