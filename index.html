@@ -333,19 +333,23 @@
 
 
 
+  
+
     //apply the theme
 
-    const retrieveTheme = function(){
+    const setTheme = function(){
     const activeTheme = localStorage.getItem("theme");
 
-    colorThemes.forEach((themeOption) => {
-    if (themeOption.id === activeTheme){
-      themeOption.checked = true;
-    }
+      colorThemes.forEach((themeOption) => {
+      if (themeOption.id === activeTheme){
+        themeOption.checked = true;
+      }
 
     });
+    
+    // without has
 
-
+    document.documentElement.className=theme;
     };
 
 
@@ -358,7 +362,7 @@
 
     //apply the theme
 
-    document.onload = retrieveTheme();
+    document.onload = setTheme();
 
 
 
