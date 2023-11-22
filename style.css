@@ -74,7 +74,7 @@
   --radio-color:#edb779;
   }
 
-
+.light,
 :root:has(#light:checked){
   --primary-color:#9fd7d9;
   --secondary-color:black;
@@ -82,7 +82,7 @@
   /*#c5e0e1*/
 }
 
-
+.dark,
 :root:has(#dark:checked){
   --primary-color:#fdd893;
   --secondary-color:rgb(220, 123, 32);
