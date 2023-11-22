@@ -58,13 +58,22 @@
        </form>
   
 
+       <div class="sorting-section">
+        <h3>Please choose the sorting order for tutor names</h3><br>
+        <form>
+          <select name="Tutorname">
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
+        </form>
+      </div>
 
 
 
 
 
         <div class="toturcontainer">
-            <div class="toturInfo">  
+           <div class="toturInfo">  
                 <img src="images/tutors1.PNG" alt=" tutors image ">
                 <div class="tutorinfo2">
                 <h3> Yasmen Al-suhaibani</h3>
@@ -109,8 +118,8 @@
             </div>
 
 
-
-
+          
+        
 
         </div>    
 
@@ -157,10 +166,64 @@
         
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        
+        const tutorContainer = document.querySelector('.toturcontainer');
+        const sortingSelect = document.querySelector('select[name="Tutorname"]');
+
+        const tutors = [
+          { name: "Yasmen Al-suhaibani", image: "images/tutors1.PNG", description: " java, python" },
+          { name: "Rama Fahad", image: "images/tutors2.PNG", description:  "robotics, front end programming" },
+          { name: " Bashair Alsadhan", image: "images/tutors3.PNG" , description:  " robotics, AI" },
+          { name: "Maryam Altuwaijri", image: "images/tutors2.PNG", description: "full stack development" },
+          { name: " Munira Al mogren ", image:  "images/tutors1.PNG", description: " python, c++" }
+        ];
+
+        function renderTutors(order) {
+          const sortedTutors = order === 'A-Z' ?
+            tutors.slice().sort((a, b) => a.name.localeCompare(b.name)) :
+            tutors.slice().sort((a, b) => b.name.localeCompare(a.name));
+
+          tutorContainer.innerHTML = '';
+
+          sortedTutors.forEach(tutor => {
+            const tutorElement = document.createElement('div');
+            tutorElement.className = 'toturInfo';
+            tutorElement.innerHTML = `
+              <img src="${tutor.image}" alt="${tutor.name} tutor">
+              <h3 >${tutor.name}</h3>
+              <p>area of teaching: <br>${tutor.description}</p>
+            `;
+            tutorContainer.appendChild(tutorElement);
+          });
+        }
+        renderTutors(sortingSelect.value);
+        sortingSelect.addEventListener('change', function () {
+          renderTutors(this.value);
+        });
+      });
+    </script>
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 <script>
 
 
