@@ -1,4 +1,3 @@
-var registeredNames = [];
 
 function validate() {
 
@@ -20,7 +19,8 @@ function validate() {
 
             //dob validate
             var dob = document.getElementById("dob");
-            if (new Date(dob.value).getFullYear() > 2017) {
+            var dobValue = new Date(dob.value);
+            if (dobValue.getFullYear() > 2017) {
                 alert("Children under the age of 6 are not accepted, sorry!");
                 return false;
             }
@@ -70,11 +70,16 @@ function validate() {
                 return false;
             }
 
-            var registeredNames = JSON.parse(localStorage.getItem('registeredNames')) || [];
-            registeredNames.push(name);
-            localStorage.setItem('registeredNames', JSON.stringify(registeredNames));
+            var names = name.value;
+            var storedNames = JSON.parse(localStorage.getItem('names') || '[]');
+            storedNames.push(names);
+            localStorage.setItem('names', JSON.stringify(storedNames));
 
-            printChildInfo(name);
+            // var registeredNames = JSON.parse(localStorage.getItem('registeredNames')) || [];
+            // registeredNames.push(name);
+            // localStorage.setItem('registeredNames', JSON.stringify(registeredNames));
+
+            // printChildInfo(name);
 
             // localStorage.setItem('name',name.value);
             // localStorage.setItem('DOB',dob.value);
@@ -90,80 +95,102 @@ function validate() {
             //     };
 
             // reader.readAsDataURL(file);
+            printChildInfo(name.value, dob.value, gender, phone.value, email.value, fileInput.files[0]);
 
-         
-            return true;
-
+  return true;
             
         }
 
-  function printChildInfo(name) {
-    var childInfoPrint = document.createElement("div");
+        function printChildInfo(name, dob, gender, phone, email, file) {
+            // Generate the content for the print page
+            var printContent = '<div style="border: 1px solid black; padding:5px;">';
+            printContent += '<img src="' + URL.createObjectURL(file) + '" alt="Uploaded File" style="max-width: 200px;"><br>';
+            printContent += "<p>Child Name: " + name + "</p>";
+            printContent += "<p>DOB " + dob + "</p>";
+            printContent += "<p>Gender: " + gender + "</p>";
+            printContent += "<p>Phone: " + phone + "</p>";
+            printContent += "<p>Email: " + email + "</p>";
+ 
+          
+            // Open a new window or tab with the print content
+            var printWindow = window.open("", "_blank");
+            printWindow.document.write('<html><head><title>Print Page</title></head><body>' + printContent + '</body></html>');
+            printWindow.document.close();
+          
+            // Call the print function when the window is loaded
+            printWindow.onload = function () {
+              printWindow.print();
+            };
+          }
+          
+
+//   function printChildInfo(name) {
+//     var childInfoPrint = document.createElement("div");
   
-    // Display the registered names as an array
-    var registeredNames = JSON.parse(localStorage.getItem('registeredNames')) || [];
-    childInfoPrint.innerHTML = `
-      <h3>Registered Names</h3>
-      <p>${registeredNames}</p>
-    `;
+//     // Display the registered names as an array
+//     var registeredNames = JSON.parse(localStorage.getItem('registeredNames')) || [];
+//     childInfoPrint.innerHTML = `
+//       <h3>Registered Names</h3>
+//       <p>${registeredNames}</p>
+//     `;
   
-    // Retrieve the uploaded file
-    var uploadedFile = document.getElementById("img").files[0];
-    var fileURL = URL.createObjectURL(uploadedFile);
+//     // Retrieve the uploaded file
+//     var uploadedFile = document.getElementById("img").files[0];
+//     var fileURL = URL.createObjectURL(uploadedFile);
   
-    // Display the uploaded file
-    childInfoPrint.innerHTML += `
-      <h3>Uploaded File</h3>
-      <img src="${fileURL}" alt="Uploaded File">
-    `;
+//     // Display the uploaded file
+//     childInfoPrint.innerHTML += `
+//       <h3>Uploaded File</h3>
+//       <img src="${fileURL}" alt="Uploaded File">
+//     `;
   
-    // Create a new window for printing
-    var printWindow = window.open("", "_blank");
-    printWindow.document.open();
+//     // Create a new window for printing
+//     var printWindow = window.open("", "_blank");
+//     printWindow.document.open();
   
-    // Write the child information to the print window
-    printWindow.document.write("<html><head><title>Child Information</title></head><body>");
-    printWindow.document.write("<h3>Child Information</h3>");
-    printWindow.document.write(childInfoPrint.innerHTML);
-    printWindow.document.write("</body></html>");
+//     // Write the child information to the print window
+//     printWindow.document.write("<html><head><title>Child Information</title></head><body>");
+//     printWindow.document.write("<h3>Child Information</h3>");
+//     printWindow.document.write(childInfoPrint.innerHTML);
+//     printWindow.document.write("</body></html>");
   
-    printWindow.document.close();
+//     printWindow.document.close();
   
-    // Trigger the print dialog
-    printWindow.print();
-    printWindow.close();
-  }
+//     // Trigger the print dialog
+//     printWindow.print();
+//     printWindow.close();
+//   }
 
         
 
     
-    // let name = document.forms["myForm"]["name"].value;
-    // if (name.value.match(/[0-9]*/)) {
-    //   alert("Name must not contain numbers");
-    //   return false;}
+//     // let name = document.forms["myForm"]["name"].value;
+//     // if (name.value.match(/[0-9]*/)) {
+//     //   alert("Name must not contain numbers");
+//     //   return false;}
     
 
-    // let phone = document.forms["myForm"]["phone"].value;
-    // if(!phone==10){
-    //     alert("Phone number should be 10 digits");
-    //     return false;}
+//     // let phone = document.forms["myForm"]["phone"].value;
+//     // if(!phone==10){
+//     //     alert("Phone number should be 10 digits");
+//     //     return false;}
     
-    // let dob=document.forms["myForm"]["phone"].value;
-    // if(dob.getFullYear() > 2017){
-    //     alert("Children under the age of 6 are not accepted- sorry!");
-    //     return false;
-    // }
+//     // let dob=document.forms["myForm"]["phone"].value;
+//     // if(dob.getFullYear() > 2017){
+//     //     alert("Children under the age of 6 are not accepted- sorry!");
+//     //     return false;
+//     // }
     
-    // }
+//     // }
 
-    // //let phone=document.getElementById("phone").value;
-    // let phoneRe= /\d{10}/;
-    // let valid=phoneRe.test(phone);
+//     // //let phone=document.getElementById("phone").value;
+//     // let phoneRe= /\d{10}/;
+//     // let valid=phoneRe.test(phone);
 
-    // if (valid===false){
-    //     alert("Phone number should be 10 digits");
-    //     return false;
-    // }
-    // return true;//
+//     // if (valid===false){
+//     //     alert("Phone number should be 10 digits");
+//     //     return false;
+//     // }
+//     // return true;//
 
   
