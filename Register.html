@@ -55,9 +55,7 @@
        </form>
   
 
-
-            <form action="/action_page.php">
-            <form name="registerForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            <form name="registerForm" action="/action_page.php" onsubmit="return validate()" method="post">
             <div class="title">
             <h2>Kid's information:</h2>
             </div>
@@ -74,13 +72,13 @@
                     <div class="gender">
                         <label>Gender:</label>
                         <label class="rad-label">
-                            <input type="radio" class="rad-input" name="gender">
+                            <input type="radio" class="rad-input" name="gender" value="male">
                             <span class="rad-design"></span>
                             <span class="rad-text">Male</span>
                         </label>
         
                         <label class="rad-label">
-                            <input type="radio" class="rad-input" name="gender">
+                            <input type="radio" class="rad-input" name="gender" value="Female">
                             <span class="rad-design"></span>
                             <span class="rad-text">Female</span>
                         </label>
@@ -112,7 +110,8 @@
 
           
     </main>
-    
+    <script src="RegisterJava.js"></script>
+
     <footer>
         <div class="container">
             <div class="col1"> <!--for the right most column*/-->
@@ -201,6 +200,5 @@
   
 
 
- 
 </body>
 </html>
