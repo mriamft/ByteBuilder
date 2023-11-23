@@ -79,10 +79,27 @@
 
 
 
+.sorting-section{
+
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+}
 
 
 
+select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
 
+option {
+  background-color: #dcfafa;
+  color: #333;
+}
 
 
 
