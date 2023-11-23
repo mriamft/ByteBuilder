@@ -52,12 +52,7 @@
 
 
 
-<!--        <div class="register">-->
-<!--            <h2 >Course evaluation</h2>-->
-<!--        </div>-->
-
-
-        <form action="/action_page.php">
+        <form action="/action_page.php" onsubmit="validateForm(event)">
             <div class="title">
                 <h3>Course Evaluation:</h3>
             </div>
@@ -125,32 +120,33 @@
                     <details class="kids-dropdown">
                         <summary class="kids-radios">
                             <input type="radio" name="kids-item" id="kids-default" title="Kids" checked>
-                            <input type="radio" name="kids-item" id="kids-item1" title="Taleen Alshebel">
-                            <input type="radio" name="kids-item" id="kids-item2" title="Rayan Alshebel">
-<!--                            <input type="radio" name="kids-item" id="kids-item3" title="kid 3">-->
-<!--                            <input type="radio" name="kids-item" id="kids-item4" title="kid 4">-->
-<!--                            <input type="radio" name="kids-item" id="kids-item5" title="kid 5">-->
                         </summary>
-                        <ul class="list">
-                            <li>
-                                <label for="kids-item1">Taleen Alshebel <span></span></label>
-                            </li>
-                            <li>
-                                <label for="kids-item2">Rayan Alshebel</label>
-                            </li>
-<!--                            <li>-->
-<!--                                <label for="kids-item3">kid 3</label>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <label for="kids-item4">kid 4</label>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <label for="kids-item5">kid 5</label>-->
-<!--                            </li>-->
+                        <ul class="list" id="kids-list">
+                            <!-- Dynamic options  -->
                         </ul>
                     </details>
                 </div>
             </div>
+<!--            <div class="wrapper_kids">-->
+<!--                <div class="filter_kids">-->
+<!--                    <details class="kids-dropdown">-->
+<!--                        <summary class="kids-radios">-->
+<!--                            <input type="radio" name="kids-item" id="kids-default" title="Kids" checked>-->
+<!--                            <input type="radio" name="kids-item" id="kids-item1" title="Taleen Alshebel">-->
+<!--                            <input type="radio" name="kids-item" id="kids-item2" title="Rayan Alshebel">-->
+
+<!--                        </summary>-->
+<!--                        <ul class="list">-->
+<!--                            <li>-->
+<!--                                <label for="kids-item1">Taleen Alshebel <span></span></label>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <label for="kids-item2">Rayan Alshebel</label>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </details>-->
+<!--                </div>-->
+<!--            </div>-->
 
 
 
@@ -263,10 +259,71 @@
 
     document.onload = retrieveTheme();
 
+    // Retrieve kids options from local storage
+    var kidsOptions = localStorage.getItem('name');
+    var kidsList = document.getElementById('kids-list');
+
+    if (kidsOptions) {
+        kidsOptions = JSON.parse(kidsOptions);
+
+        // Create and append option elements based on the retrieved data
+        kidsOptions.forEach(function(option) {
+            var li = document.createElement('li');
+            var label = document.createElement('label');
+            var input = document.createElement('input');
+            input.type = 'radio';
+            input.name = 'kids-item';
+            input.id = option.id;
+            input.title = option.title;
+
+            label.htmlFor = option.id;
+            label.textContent = option.title;
+
+            li.appendChild(input);
+            li.appendChild(label);
+
+            kidsList.appendChild(li);
+        });
+    } else {
+        // If there are no registered kids, display a message
+        var li = document.createElement('li');
+        li.textContent = 'No kids registered yet.';
+        kidsList.appendChild(li);
+    }
+    function validateForm(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Check if a course is selected
+        var courseSelected = document.querySelector('input[name="course-item"]:checked');
+        if (!courseSelected || courseSelected.id === 'course-default') {
+            alert("Please select a course.");
+            return;
+        }
+
+        // Check if a rating is selected
+        var ratingSelected = document.querySelector('input[name="rate"]:checked');
+        if (!ratingSelected) {
+            alert("Please select a rating.");
+            return;
+        }
+
+        // Get the selected course name and rating
+        var courseName = courseSelected.getAttribute('title');
+        var userRating = ratingSelected.value;
+
+        // Display the alert message
+        alert("Thank you for your feedback!\nYour rating for course " + courseName + " is " + userRating);
+
+        // Optionally, you can submit the form here
+        // document.querySelector('form').submit();
 
 
- 
+
+    // Return to the previous page
+    history.back();
+                }
 </script>
+
   
 
 

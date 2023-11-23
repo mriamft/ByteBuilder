@@ -76,7 +76,7 @@
 
             <div class="CoursesContainer">
 
-                <div class="course">
+                <div class="course" data-tutor="Bashair alsadhan" data-prerequisites="Python programming">
                     <div class="courseImage">
                         <img src="images/AI_course_image.jpg" alt="course image">
 
@@ -109,7 +109,7 @@
 
                 </div> <!--end Course-->
 
-                <div class="course">
+                <div class="course" data-tutor="Rama fahad" data-prerequisites="">
                     <div class="courseImage">
                         <img src="images/technology-wallpaper1.jpg" alt="course image">
 
@@ -140,7 +140,7 @@
 
 
                 </div> <!--end Course-->
-                <div class="course">
+                <div class="course" data-tutor="Maryam altuwaijri" data-prerequisites="Object-oriented programming">
                     <div class="courseImage">
                         <img src="images/coding-language-java.jpg" alt="course image">
 
@@ -174,7 +174,7 @@
                 </div> <!--end Course-->
 
 
-                <div class="course">
+                <div class="course" data-tutor="Munira Al mogren" data-prerequisites="Object-oriented programming">
                     <div class="courseImage">
 
                         <img src="images/flatterimage.png" alt="course image">
@@ -206,7 +206,7 @@
 
 
                 </div> <!--end Course-->
-                <div class="course">
+                <div class="course" data-tutor="Yasmen al-Suhaibani" data-prerequisites="Electronics">
                     <div class="courseImage">
 
                         <img src="images/roboticimages.jpg" alt="course image">
@@ -215,7 +215,7 @@
 
 
                     <div class="courseAlreadyDisplayed">
-                        <input type="checkbox" name="course" id="course5" value="Python">
+                        <input type="checkbox" name="course" id="course5" value="robotics">
                         <label for="course5"></label>
 
 
@@ -240,7 +240,7 @@
 
 
                 </div> <!--end Course-->
-                <div class="course">
+                <div class="course" data-tutor="Rama fahad" data-prerequisites="">
                     <div class="courseImage">
 
                         <img src="images/Scratch-square-full.jpg" alt="course image">
@@ -249,7 +249,7 @@
 
 
                     <div class="courseAlreadyDisplayed">
-                        <input type="checkbox" name="course" id="course6" value="Python">
+                        <input type="checkbox" name="course" id="course6" value="scratch">
                         <label for="course6"></label>
 
 
@@ -275,7 +275,7 @@
 
                 </div> <!--end Course-->
 
-                <div class="course">
+                <div class="course" data-tutor="Bashair alsadhan" data-prerequisites="">
                     <div class="courseImage">
 
                         <img src="images/pythonomage.png" alt="course image">
@@ -309,7 +309,7 @@
 
 
                 </div> <!--end Course-->
-                <div class="course">
+                <div class="course" data-tutor="Maryam altuwaijri" data-prerequisites="HTML, CSS, JavaScript">
                     <div class="courseImage">
 
                         <img src="images/front-end-web.png" alt="course image">
@@ -343,14 +343,45 @@
 
 
                 </div> <!--end Course-->
+                <div class="course" data-tutor="Bashair alsadhan" data-prerequisites="Python programming">
+                    <div class="courseImage">
+                        <img src="images/AI_course_image.jpg" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course9" value="Ai">
+                        <label for="course9"></label>
+
+                        <h6>AI programming with python</h6>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b>Bashair alsadhan</p>
+                        <p><b>Time:</b> 5:00pm to 9:00pm</p>
+                        <p><b>Days:</b> tuesday and thursday </p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+
 
             </div> <!--end CoursesContainer-->
 
-
-            <div class="action">
-                <input type="submit" value="Enroll">
-            </div>
-
+        <div class="action">
+            <input id="enrollButton" type="submit" value="Enroll">
+        </div>
         </div>
 </main>
 
@@ -428,6 +459,7 @@
     //apply the theme
 
     document.onload = retrieveTheme();
+
     var courses = [
         {
             name: 'AI programming with Python',
@@ -447,12 +479,12 @@
         {
             name: 'Flutter',
             tutor: 'Munira Al mogren',
-            prerequisites: ['Dart programming']
+            prerequisites: ['Object-oriented programming']
         },
         {
             name: 'Robotics',
             tutor: 'Yasmen al-Suhaibani',
-            prerequisites: ['Electronics', 'Programming']
+            prerequisites: ['Electronics']
         },
         {
             name: 'Scratch',
@@ -462,15 +494,19 @@
         {
             name: 'Python',
             tutor: 'Bashair alsadhan',
-            prerequisites: ['Python programming']
+            prerequisites: []
         },
         {
             name: 'Front-end Development',
             tutor: 'Maryam altuwaijri',
             prerequisites: ['HTML', 'CSS', 'JavaScript']
+        },
+        {
+            name: 'AI programming with Python',
+            tutor: 'Bashair alsadhan',
+            prerequisites: ['Python programming']
         }
     ];
-
     var tutors = [];
     var prerequisites = [];
 
@@ -491,6 +527,41 @@
             }
         }
     }
+    // Populate the filter options for kids
+    var kidsFilter = document.getElementById("kidsFilter");
+
+    // Remove existing options
+    kidsFilter.innerHTML = '';
+
+    var labelKidsOption = document.createElement("option");
+    labelKidsOption.value = "";
+    labelKidsOption.textContent = "Kids";
+    kidsFilter.appendChild(labelKidsOption);
+
+    var kids = localStorage.getItem("name");
+
+    if (kids) {
+        kids = JSON.parse(kids);
+
+        for (var i = 0; i < kids.length; i++) {
+            var kidOption = document.createElement("option");
+            kidOption.value = kids[i];
+            kidOption.textContent = kids[i];
+            kidsFilter.appendChild(kidOption);
+        }
+    } else {
+        var noKidsOption = document.createElement("option");
+        noKidsOption.value = "";
+        noKidsOption.textContent = "No registered kids yet";
+        noKidsOption.disabled = true;
+        kidsFilter.appendChild(noKidsOption);
+    }
+
+    // Disable label option
+    labelKidsOption.disabled = true;
+    labelKidsOption.style.fontStyle = "italic";
+
+
 
     // Populate the filter options for tutors
     var tutorFilter = document.getElementById("tutorFilter");
@@ -498,10 +569,11 @@
     // Remove existing options
     tutorFilter.innerHTML = '';
 
-    var defaultTutorOption = document.createElement("option");
-    defaultTutorOption.value = "";
-    defaultTutorOption.textContent = "All Tutors";
-    tutorFilter.appendChild(defaultTutorOption);
+    var labelTutorOption = document.createElement("option");
+    labelTutorOption.value = "";
+    labelTutorOption.textContent = "Tutors";
+    tutorFilter.appendChild(labelTutorOption);
+
 
     for (var i = 0; i < tutors.length; i++) {
         var tutorOption = document.createElement("option");
@@ -510,23 +582,153 @@
         tutorFilter.appendChild(tutorOption);
     }
 
+    // Disable label option
+    labelTutorOption.disabled = true;
+    labelTutorOption.style.fontStyle = "italic";
+
+
+
+
+
     // Populate the filter options for prerequisites
     var prerequisitesFilter = document.getElementById("prerequisitesFilter");
 
     // Remove existing options
     prerequisitesFilter.innerHTML = '';
 
-    var defaultPrerequisitesOption = document.createElement("option");
-    defaultPrerequisitesOption.value = "";
-    defaultPrerequisitesOption.textContent = "All Prerequisites";
-    prerequisitesFilter.appendChild(defaultPrerequisitesOption);
+    var labelPrerequisitesOption = document.createElement("option");
+    labelPrerequisitesOption.value = "";
+    labelPrerequisitesOption.textContent = "Prerequisites";
+    prerequisitesFilter.appendChild(labelPrerequisitesOption);
 
-    for (var i = 0; i < prerequisites.length; i++) {
-        var prerequisiteOption = document.createElement("option");
-        prerequisiteOption.value = prerequisites[i];
-        prerequisiteOption.textContent = prerequisites[i];
-        prerequisitesFilter.appendChild(prerequisiteOption);
+    var prerequisiteSet = new Set(); // Use a Set to store unique prerequisites
+
+    var coursesWithNoPrerequisites = [];
+
+    for (var i = 0; i < courses.length; i++) {
+        var course = courses[i];
+        var prerequisites = course.prerequisites;
+
+        if (prerequisites.length === 0) {
+            coursesWithNoPrerequisites.push(course);
+        }
+
+        for (var j = 0; j < prerequisites.length; j++) {
+            var prerequisite = prerequisites[j].trim();
+
+            if (prerequisite !== "" && !prerequisiteSet.has(prerequisite)) {
+                prerequisiteSet.add(prerequisite);
+
+                var prerequisiteOption = document.createElement("option");
+                prerequisiteOption.value = prerequisite;
+                prerequisiteOption.textContent = prerequisite;
+                prerequisitesFilter.appendChild(prerequisiteOption);
+            }
+        }
     }
+
+    // Add "None" option if there are courses with no prerequisites
+    if (coursesWithNoPrerequisites.length > 0) {
+        var noneOption = document.createElement("option");
+        noneOption.value = "none";
+        noneOption.textContent = "None";
+        prerequisitesFilter.appendChild(noneOption);
+    }
+
+    // Disable label option
+    labelPrerequisitesOption.disabled = true;
+    labelPrerequisitesOption.style.fontStyle = "italic";
+
+    // Add event listener to handle filter changes
+    prerequisitesFilter.addEventListener("change", function () {
+        var selectedPrerequisite = prerequisitesFilter.value;
+
+        if (selectedPrerequisite === "none") {
+            displayCoursesWithNoPrerequisites();
+        } else {
+            displayCoursesWithPrerequisite(selectedPrerequisite);
+        }
+    });
+
+    // Function to display courses with no prerequisites
+    function displayCoursesWithNoPrerequisites() {
+        var filteredCourses = courses.filter(function (course) {
+            return course.prerequisites.length === 0;
+        });
+
+        // Display filtered courses
+        console.log(filteredCourses);
+    }
+
+    // Function to display courses with a specific prerequisite
+    function displayCoursesWithPrerequisite(prerequisite) {
+        var filteredCourses = courses.filter(function (course) {
+            return course.prerequisites.includes(prerequisite);
+        });
+
+        // Display filtered courses
+        console.log(filteredCourses);
+    }
+
+
+
+
+
+
+
+
+    // Add event listeners to the filter options
+    var tutorFilter = document.getElementById("tutorFilter");
+    tutorFilter.addEventListener("change", filterCourses);
+
+    var prerequisitesFilter = document.getElementById("prerequisitesFilter");
+    prerequisitesFilter.addEventListener("change", filterCourses);
+    var enrollButton = document.getElementById("enrollButton");
+    enrollButton.addEventListener("click", validateForm);
+
+    // Form validation function
+    function validateForm(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var childrenNames = JSON.parse(localStorage.getItem("name"));
+        var selectedChildren = document.querySelectorAll('input[name="selectedChildren"]:checked');
+        var selectedCourses = document.querySelectorAll('input[name="selectedCourses"]:checked');
+
+        if (selectedChildren.length === 0) {
+            alert("Please select at least one child.");
+            return;
+        }
+
+        if (selectedCourses.length === 0) {
+            alert("Please select at least one course.");
+            return;
+        } // Clear previous information
+        var enrollmentInfo = document.getElementById("enrollmentInfo");
+        enrollmentInfo.innerHTML = "";
+
+        // Display new information
+        var childName = selectedChildren[0].value; // Assuming only one child can be selected
+
+        var coursesInfo = "<h2>Enrollment Information</h2>";
+        coursesInfo += "<p>Child: " + childName + "</p>";
+        coursesInfo += "<ul>";
+
+        selectedCourses.forEach(function (course) {
+            var courseName = course.value;
+            var tutor = course.parentNode.querySelector(".courseTutor").textContent;
+
+            coursesInfo += "<li>" + courseName + " (Tutor: " + tutor + ")</li>";
+        });
+
+        coursesInfo += "</ul>";
+
+        enrollmentInfo.innerHTML = coursesInfo;
+
+        // Clear the form
+        var form = document.getElementById("enrollmentForm");
+        form.reset();
+    }
+
 </script>
 
 
