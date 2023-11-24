@@ -1,5 +1,5 @@
 
-function validate() {
+function validate(){
 
     var empt="";
 
@@ -112,7 +112,7 @@ function validate() {
             printContent += "</div>";
           
             var printWindow = window.open("", "_blank");
-            printWindow.document.write('<html><head><title>Print Page</title></head><body>' + printContent + '</body></html>');
+            printWindow.document.write('<html><head><title>Print Page</title></head><body>'+ printContent +'</body></html>');
             printWindow.document.close();
           
             printWindow.onload = function() {
