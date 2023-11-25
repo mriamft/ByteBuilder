@@ -18,7 +18,7 @@ function displayChildName() {
       kidInfoElement.appendChild(nameElement);
       kidsContainer.appendChild(kidInfoElement);
 }
- 
+
     }
     else{
     var childNames = JSON.parse(localStorage.getItem('names') || '[]');
@@ -26,7 +26,7 @@ function displayChildName() {
     childNames.forEach(function(name, index) {
       var kidInfoElement = document.createElement('div');
       kidInfoElement.classList.add('kidinfo');
- 
+
 
       var imgs = JSON.parse(localStorage.getItem('images') || '[]');
       var picElement = document.createElement('img');

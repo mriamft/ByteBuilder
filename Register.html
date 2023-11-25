@@ -110,7 +110,7 @@
 
           
     </main>
-    <script src="RegisterJava.js"></script> 
+    <script src="RegisterJava.js"></script>
 
     <footer>
         <div class="container">
@@ -200,7 +200,7 @@
 inputEl.addEventListener('change' , () => {
 // Listens for new input file
 
-    const file = inputEl.files[0]; 
+    const file = inputEl.files[0];
     // Gets file from input element
 
     const fr = new FileReader();
@@ -218,10 +218,10 @@ inputEl.addEventListener('change' , () => {
     })})
 
     inputEl.addEventListener('change' , () => {
-    const file = inputEl.files[0]; 
+    const file = inputEl.files[0];
     const fr = new FileReader();
     fr.readAsDataURL(file);
- 
+
     fr.addEventListener('load', () => {
         const url = fr.result
         var imgs = JSON.parse(localStorage.getItem('images') || '[]');
@@ -231,7 +231,7 @@ inputEl.addEventListener('change' , () => {
     })
 });
 
- 
+
 
 
 
