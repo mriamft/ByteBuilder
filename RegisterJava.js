@@ -1,5 +1,5 @@
 
-function validate(){
+function validate() {
 
     var empt="";
 
@@ -102,23 +102,27 @@ function validate(){
         }
 
         function printChildInfo(name, dob, gender, phone, email, file) {
+            // Generate the content for the print page
             var printContent = '<div style="border: 1px solid black; padding:5px;">';
             printContent += '<img src="' + URL.createObjectURL(file) + '" alt="Uploaded File" style="max-width: 200px;"><br>';
             printContent += "<p>Child Name: " + name + "</p>";
-            printContent += "<p>DOB: " + dob + "</p>";
+            printContent += "<p>DOB " + dob + "</p>";
             printContent += "<p>Gender: " + gender + "</p>";
             printContent += "<p>Phone: " + phone + "</p>";
             printContent += "<p>Email: " + email + "</p>";
-            printContent += "</div>";
+ 
           
+            // Open a new window or tab with the print content
             var printWindow = window.open("", "_blank");
-            printWindow.document.write('<html><head><title>Print Page</title></head><body>'+ printContent +'</body></html>');
+            printWindow.document.write('<html><head><title>Print Page</title></head><body>' + printContent + '</body></html>');
             printWindow.document.close();
           
-            printWindow.onload = function() {
+            // Call the print function when the window is loaded
+            printWindow.onload = function () {
               printWindow.print();
             };
           }
+          
 
 //   function printChildInfo(name) {
 //     var childInfoPrint = document.createElement("div");

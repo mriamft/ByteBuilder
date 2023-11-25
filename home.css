@@ -175,18 +175,7 @@ color: rgb(255, 196, 0);
 }
 
 
-@media (max-width: 1024px) {
-  .vision {
-    min-height: 40vh; 
-  }
-  .title{
-    font-size: 3em;
-  }
 
-  .vision p{
-    font-size: 1.7em;
-  }
-}
 
 @media (max-width: 743px) {
 
@@ -354,7 +343,7 @@ color: rgb(255, 196, 0);
     }
       
     .vision p{
-      font-size: .8em;
+      font-size: 1em;
     }
 
     .course-card{

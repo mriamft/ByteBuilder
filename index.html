@@ -24,16 +24,6 @@
     </nav>
     <button class="menu-button">&#9776;</button>
   </header>
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.querySelector('.menu-button');
-    const navbar = document.querySelector('.navbar');
-  
-    menuButton.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-    });
-  });
-</script>
   <main>
 
  
@@ -47,7 +37,7 @@
     <div>
      
       <!--change theme -->
-      <form action="#" class="color-picker">
+      <form action="" class="color-picker">
        <fieldset>
          <legend class="visually-hidden"> pick a color scheme </legend>
          <label for="light" class="visually-hidden"> light</label>
@@ -331,48 +321,52 @@
 <script>
 
 
-  const colorThemes=document.querySelectorAll('[name="theme"]');
+    const colorThemes=document.querySelectorAll('[name="theme"]');
+    
+
+    //store the theme
+
+    const storeTheme=function(theme){
+      localStorage.setItem("theme",theme);
+
+    };
+
+
+
   
 
-  //store the theme
+    //apply the theme
 
-  const storeTheme=function(theme){
-    localStorage.setItem("theme",theme);
+    const setTheme = function(){
+    const activeTheme = localStorage.getItem("theme");
 
-  };
+      colorThemes.forEach((themeOption) => {
+      if (themeOption.id === activeTheme){
+        themeOption.checked = true;
+      }
 
+    });
+    
+    // without has
 
-
-  //apply the theme
-
-  const retrieveTheme = function(){
-  const activeTheme = localStorage.getItem("theme");
-
-  colorThemes.forEach((themeOption) => {
-  if (themeOption.id === activeTheme){
-    themeOption.checked = true;
-  }
-
-  });
+    document.documentElement.className=theme;
+    };
 
 
-  };
+    colorThemes.forEach(themeOption =>{
+    themeOption.addEventListener('click',()=>{
+      storeTheme(themeOption.id);
+    });
+    });
 
 
-  colorThemes.forEach(themeOption =>{
-  themeOption.addEventListener('click',()=>{
-    storeTheme(themeOption.id);
-  });
-  });
+    //apply the theme
 
-
-  //apply the theme
-
-  document.onload = retrieveTheme();
+    document.onload = setTheme();
 
 
 
-
+ 
 </script>
   
 </body>
