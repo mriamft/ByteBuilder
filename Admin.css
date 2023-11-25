@@ -1,7 +1,7 @@
 
 
 
-
+ 
 .kisds_table .container label img{
   position: absolute;
   right:0%;
@@ -10,7 +10,7 @@
   flex-shrink: 0;
   width:8%;
   background-color: #fffcf2;  }
-  
+   
   #checked{
   display: none;
   }
