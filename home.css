@@ -13,7 +13,7 @@ main{
   background-image: linear-gradient(rgba(255, 255, 255, 0.6) 100%, transparent), url(images/visionImage.webp);
   background-size: cover;
 }
- 
+  
 img {
   max-width: 100%;
   height: auto;

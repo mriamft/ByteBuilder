@@ -18,7 +18,7 @@ function displayChildName() {
       kidInfoElement.appendChild(nameElement);
       kidsContainer.appendChild(kidInfoElement);
 }
- 
+  
     }
     else{
     var childNames = JSON.parse(localStorage.getItem('names') || '[]');

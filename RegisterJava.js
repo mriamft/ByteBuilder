@@ -97,7 +97,7 @@ function validate(){
             // reader.readAsDataURL(file);
             printChildInfo(name.value, dob.value, gender, phone.value, email.value, fileInput.files[0]);
 
-  return true;
+  return true; 
              
         }
 
