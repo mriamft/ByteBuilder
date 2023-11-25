@@ -12,7 +12,7 @@ ul.breadcrumb {
     display: inline;
     font-size: 18px;
   } 
-*/
+*/ 
   /* Add a slash symbol (/) before/behind each list item 
   ul.breadcrumb li+li:before {
     padding: 8px;
