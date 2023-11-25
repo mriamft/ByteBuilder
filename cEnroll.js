@@ -96,4 +96,4 @@ for (var i = 0; i < prerequisites.length; i++) {
     prerequisiteOption.value = prerequisites[i];
     prerequisiteOption.textContent = prerequisites[i];
     prerequisitesFilter.appendChild(prerequisiteOption);
-}
+}  

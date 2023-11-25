@@ -7,7 +7,7 @@ onload=function(){
     let todayDate =document.createElement('p');
 
   
-
+  
     
     let date=new Date();
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];

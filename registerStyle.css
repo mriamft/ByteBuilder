@@ -117,13 +117,13 @@ form .action input:active{
 form .item input:hover{
 background: rgba(255, 225, 182, 0.639);
 }
-
+ 
 
 
 .rad-label {
   display: flex;
   align-items: center;
-
+ 
   border-radius: 100px;
   padding: 14px 16px;
   margin: 10px 0;

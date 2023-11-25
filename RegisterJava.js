@@ -80,7 +80,7 @@ function validate(){
             // localStorage.setItem('registeredNames', JSON.stringify(registeredNames));
 
             // printChildInfo(name);
-
+ 
             // localStorage.setItem('name',name.value);
             // localStorage.setItem('DOB',dob.value);
             // localStorage.setItem('Gender',gender);
@@ -98,7 +98,7 @@ function validate(){
             printChildInfo(name.value, dob.value, gender, phone.value, email.value, fileInput.files[0]);
 
   return true;
-            
+             
         }
 
         function printChildInfo(name, dob, gender, phone, email, file) {

@@ -221,7 +221,7 @@ inputEl.addEventListener('change' , () => {
     const file = inputEl.files[0]; 
     const fr = new FileReader();
     fr.readAsDataURL(file);
-
+ 
     fr.addEventListener('load', () => {
         const url = fr.result
         var imgs = JSON.parse(localStorage.getItem('images') || '[]');
@@ -231,7 +231,7 @@ inputEl.addEventListener('change' , () => {
     })
 });
 
-
+ 
 
 
 
