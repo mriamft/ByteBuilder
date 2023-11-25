@@ -356,6 +356,11 @@ ul.breadcrumb li a:hover {
   .col2 img {
     width: .7rem; 
   }
+
+  .navbar li a{
+justify-content: space-between;
+padding-left: 1.3rem;
+  }
 }
 
 
